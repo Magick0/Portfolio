@@ -1,0 +1,350 @@
+/*haut droite bas gauche*/
+@font-face {
+    font-family: 'Paris2024';
+    src: url('../fonts/paris2024.woff') format('woff') , url('../fonts/paris2024.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Sofia-Pro';
+    src: url('../fonts/sofiapro-light-webfont.woff') format('woff') , url('../fonts/sofiapro-light-webfont.woff2') format('woff2');
+}
+ 
+@media (max-width: 930px) {
+    nav li {
+        display: none;
+    }
+ 
+    img {
+        image-rendering: optimizeSpeed;
+        text-rendering: optimizeSpeed;
+        shape-rendering: optimizeSpeed;
+    }
+}
+ 
+@media (min-width: 931px) {
+    li {
+        display: block;
+    }
+}
+ 
+figure, h1, img, figcaption {
+    user-select: none;
+}
+ 
+body {
+    margin: -0;
+    font-family: 'Sofia-Pro';
+    color: #0d0d0d;
+    overflow-x: hidden;
+    background-image: url();
+    
+}
+ 
+h2 {
+    font-family: 'Paris2024';
+}
+ 
+/*--------------------------*/
+/*----------HEADER----------*/
+/*--------------------------*/
+ 
+/*nav*/
+nav {
+    display: flex;
+    border: #720000 solid 3px;
+    background-color: #f2f2f2;
+    background-image: none;
+    font-weight: bold;
+    height: 6em;
+    position: fixed;
+    top: 23px; left: 23px; right: 23px;
+    border-radius: 13px;
+}
+nav div:not(.triangle) {
+    background-color: #0d0d0d;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+nav img {
+    width: 4.5em;
+    height: 4.5em;
+}
+
+h1 {
+    font-family: 'Paris2024';
+    font-size: 3em;
+    margin-left: 0.25em;
+    line-height: 90%;
+}
+
+section > h1 ,nav h1{
+    color: #d9c27e;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.triangle {
+    width: -0;
+    height: -0;
+    border-left: 5em solid #0d0d0d;
+    border-top: 3em solid transparent;
+    border-bottom: 3em solid transparent;
+}
+nav ul {
+    display: flex;
+    font-size: 160%;
+    list-style: none;
+    align-items: center;
+    margin-left: -2em;
+    flex-wrap: wrap;
+}
+nav li {
+    margin-left: 1.5em;
+}
+nav a:hover {
+    color: #830000;
+    transition: color 0.3s;
+}
+nav a {
+    text-decoration: none;
+    color: #0d0d0d;
+}
+ 
+/*backgound*/
+header {
+    background-image: url(../img/epreuve_header_bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-bottom: #720000 solid 1em;
+    align-content: flex-end;
+    height: 49em;
+}
+header figure {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4em;
+}
+header figure img {
+    width: 15em;
+}
+header figcaption {
+    font-family: 'Paris2024';
+    font-size: 7em;
+    color: #f2f2f2;
+}
+ 
+/*--------------------------*/
+/*-----------MAIN-----------*/
+/*--------------------------*/
+ 
+main {
+    justify-self: center;
+    color: #f2f2f2;
+    background: #dad5d5;
+    margin: 2em;
+    margin-bottom: -0;
+    padding: 2em;
+    border: #720000 solid 3px;
+    border-radius: 13px;
+    z-index: 1;
+    margin-top: -4em;
+}
+
+main section article table{
+    border-collapse: collapse;
+}
+
+main section article table tr{
+    background: rgb(66, 65, 65);
+    border-collapse: separate;
+    border-radius: 13px;
+    
+}
+ 
+main h2 {
+    font-size: 2em;
+    justify-self: flex-start;
+}
+ 
+main section {
+    background-color: #008af0;
+    border: #720000 solid 3px;
+    border-radius: 13px;
+    justify-items: center;
+    padding: -0 2em 2em 2em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+main article {
+    justify-content: center;
+    border-radius: 22px;
+    background-color: #002279;
+    font-size: 2em;
+    padding: 1em;
+    text-align: justify;
+}
+ 
+main figure {
+    justify-items: center;
+    justify-self: center;
+    background-color: #dad5d5;
+    height: 10em;
+    width: 35em;
+    border-radius: 13px;
+}
+
+.Informations img {
+    width: 400px;
+    height: 400px;
+}
+
+.Informations {
+    width: 480px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+ 
+main figure img {
+    width: 35em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 13px;
+    z-index: -2;
+    margin-top: 0.5em;
+    margin-left: -0.5em;
+    transition: all 0.4s;
+}
+ 
+main figure:hover img {
+    margin-left: -0em;
+    margin-top: -0em;
+}
+ 
+main figure div {
+    width: 35em;
+    height: 10em;
+    z-index: -1;
+    background-color: #dad5d5;
+    border-radius: 13px;
+}
+
+section article figure, section article figure img  {
+    width: 512px;
+    height: 288px;
+}
+
+article p {
+    font-size: 1em;
+}
+ 
+/*--------------------------*/
+/*----------FOOTER----------*/
+/*--------------------------*/
+ 
+footer {
+    border-left: #720000 solid 3px;
+    border-right: #720000 solid 3px;
+    justify-self: center;
+    margin-bottom: -10em;
+}
+ 
+/*partenaires*/
+footer article:first-child {
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: center;
+}
+ 
+footer tr, footer td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer article:first-child img {
+    width: 13em;
+    height: 18em;
+    object-fit: contain;
+    margin: 0  2.5em 0 2.5em;
+}
+ 
+/*vrai footer*/
+footer article:not(:first-child) {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+}
+ 
+footer section {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    justify-self: center;
+    padding: 3em;
+}
+ 
+footer section img {
+    width: 9em;
+    height: 9em;
+}
+ 
+footer section div {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: #0d0d0d;
+    border-radius: 13px;
+    height: 5em;
+    width: 25em;
+    justify-content: space-around;
+}
+footer section div h3 {
+    font-size: em;
+    font-weight: bold;
+}
+footer section div img {
+    width: 3.5em;
+    height: auto;
+}
+ 
+footer section tr {
+    width: 19em;
+    justify-content: space-between;
+}
+footer section table img {
+    width: 3.5em;
+    height: auto;
+}
+ 
+footer hr {
+    width: 75%;
+}
+ 
+footer ul {
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    justify-self: center;
+    align-items: center;
+}
+footer li {
+    font-weight: bold;
+    align-items: center;
+}
+footer li:hover a {
+    color: #d9c27e;
+    transition: color 0.3s;
+}
+footer li a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
