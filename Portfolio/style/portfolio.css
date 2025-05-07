@@ -1,31 +1,4 @@
-/*haut droite bas gauche*/
-@font-face {
-    font-family: 'Paris2024';
-    src: url('../fonts/paris2024.woff') format('woff') , url('../fonts/paris2024.woff2') format('woff2');
-}
-@font-face {
-    font-family: 'Sofia-Pro';
-    src: url('../fonts/sofiapro-light-webfont.woff') format('woff') , url('../fonts/sofiapro-light-webfont.woff2') format('woff2');
-}
- 
-@media (max-width: 930px) {
-    nav li {
-        display: none;
-    }
- 
-    img {
-        image-rendering: optimizeSpeed;
-        text-rendering: optimizeSpeed;
-        shape-rendering: optimizeSpeed;
-    }
-}
- 
-@media (min-width: 931px) {
-    li {
-        display: block;
-    }
-}
- 
+
 figure, h1, img, figcaption {
     user-select: none;
 }
@@ -48,31 +21,42 @@ h2 {
 /*--------------------------*/
  
 /*nav*/
-nav {
+
+.menuH {
     display: flex;
-    border: #720000 solid 3px;
-    background-color: #f2f2f2;
-    background-image: none;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
     font-weight: bold;
     height: 6em;
     position: fixed;
-    top: 23px; left: 23px; right: 23px;
-    border-radius: 13px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-nav div:not(.triangle) {
-    background-color: #0d0d0d;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-repeat: no-repeat;
+
+.menuH .menuH-items {
     display: flex;
-    padding: 1em;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
 }
-nav img {
-    width: 4.5em;
-    height: 4.5em;
+
+.menuH a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    flex: 1;
+    text-align: center;
+    transition: color 0.3s;
 }
+
+.menuH a:hover {
+    color: #830000;
+}
+
 
 h1 {
     font-family: 'Paris2024';
@@ -81,49 +65,24 @@ h1 {
     line-height: 90%;
 }
 
-section > h1 ,nav h1{
-    color: #d9c27e;
-}
+
 
 h3 {
     font-size: 1.5em;
 }
 
-.triangle {
-    width: -0;
-    height: -0;
-    border-left: 5em solid #0d0d0d;
-    border-top: 3em solid transparent;
-    border-bottom: 3em solid transparent;
+section > h1 ,nav h1{
+    color: #d9c27e;
 }
-nav ul {
-    display: flex;
-    font-size: 160%;
-    list-style: none;
-    align-items: center;
-    margin-left: -2em;
-    flex-wrap: wrap;
-}
-nav li {
-    margin-left: 1.5em;
-}
-nav a:hover {
-    color: #830000;
-    transition: color 0.3s;
-}
-nav a {
-    text-decoration: none;
-    color: #0d0d0d;
-}
+
  
 /*backgound*/
 header {
     background-image: url(../img/epreuve_header_bg.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
-    border-bottom: #720000 solid 1em;
     align-content: flex-end;
-    height: 49em;
+    height: 96px;
 }
 header figure {
     display: flex;
@@ -143,19 +102,6 @@ header figcaption {
 /*-----------MAIN-----------*/
 /*--------------------------*/
  
-main {
-    justify-self: center;
-    color: #f2f2f2;
-    background: #dad5d5;
-    margin: 2em;
-    margin-bottom: -0;
-    padding: 2em;
-    border: #720000 solid 3px;
-    border-radius: 13px;
-    z-index: 1;
-    margin-top: -4em;
-}
-
 main section article table{
     border-collapse: collapse;
 }
@@ -171,16 +117,30 @@ main h2 {
     font-size: 2em;
     justify-self: flex-start;
 }
- 
+
 main section {
-    background-color: #008af0;
-    border: #720000 solid 3px;
-    border-radius: 13px;
-    justify-items: center;
-    padding: -0 2em 2em 2em;
-    margin-bottom: 1em;
+    border: #0d0d0d solid 3px;
+    justify-content: center;
+    align-content: center;
+    margin: 2em;
     display: flex;
     flex-wrap: wrap;
+}
+ 
+main .AboutMe {
+    display: flex;
+    padding-top: 15em;
+    align-items: center;
+    justify-content: space-between; 
+    
+}
+
+main .AboutMe img {
+    width: 200px;    
+    height: auto;         
+    object-fit: cover;    
+    border-radius: 45%;  
+    border: 3px solid white; 
 }
  
 main article {
