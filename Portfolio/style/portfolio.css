@@ -54,7 +54,7 @@ h2 {
 }
 
 .menuH a:hover {
-    color: #830000;
+    color: #34aa29;
 }
 
 
@@ -77,6 +77,7 @@ section > h1 ,nav h1{
 
  
 /*backgound*/
+
 header {
     background-image: url(../img/epreuve_header_bg.jpeg);
     background-repeat: no-repeat;
@@ -102,45 +103,38 @@ header figcaption {
 /*-----------MAIN-----------*/
 /*--------------------------*/
  
-main section article table{
-    border-collapse: collapse;
-}
-
-main section article table tr{
-    background: rgb(66, 65, 65);
-    border-collapse: separate;
-    border-radius: 13px;
-    
-}
- 
 main h2 {
     font-size: 2em;
     justify-self: flex-start;
 }
 
 main section {
-    border: #0d0d0d solid 3px;
+    border: #ffffff solid 3px;                              /*  bordures  */
     justify-content: center;
     align-content: center;
     margin: 2em;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 15em;
+    padding-bottom: 15em;
 }
+
  
 main .AboutMe {
     display: flex;
-    padding-top: 15em;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center; 
     
 }
 
-main .AboutMe img {
-    width: 200px;    
+main .AboutMe img {      /* Photo de Profil */
+    margin-left:60px;
+    width: 400px;    
     height: auto;         
     object-fit: cover;    
     border-radius: 45%;  
     border: 3px solid white; 
+    box-shadow: 2px 2px 15px #000000;
 }
  
 main article {
