@@ -102,11 +102,7 @@ header figcaption {
 /*--------------------------*/
 /*-----------MAIN-----------*/
 /*--------------------------*/
- 
-main h2 {
-    font-size: 2em;
-    justify-self: flex-start;
-}
+
 
 main section {
     border: #ffffff solid 3px;                              /*  bordures  */
@@ -115,8 +111,8 @@ main section {
     margin: 2em;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 15em;
-    padding-bottom: 15em;
+    padding-top: 12em;
+    padding-bottom: 12em;
 }
 
  
@@ -134,7 +130,7 @@ main .AboutMe img {      /* Photo de Profil */
     object-fit: cover;    
     border-radius: 45%;  
     border: 3px solid white; 
-    box-shadow: 2px 2px 15px #000000;
+    box-shadow: 2px 2px 15px #007222;
 }
  
 main article {
