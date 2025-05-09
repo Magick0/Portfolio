@@ -5,16 +5,21 @@ figure, h1, img, figcaption {
  
 body {
     margin: -0;
-    font-family: 'Sofia-Pro';
+    font-family:"Bai Jamjuree", sans-serif;       /*'Sofia-Pro'*/
     color: #0d0d0d;
     overflow-x: hidden;
     background-image: url();
-    
+    text-decoration: none;
+    flex: 1;
+    text-align: center;  
+    font-size: 1.3rem;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
  
-h2 {
-    font-family: 'Paris2024';
-}
  
 /*--------------------------*/
 /*----------HEADER----------*/
@@ -23,6 +28,7 @@ h2 {
 /*nav*/
 
 .menuH {
+    font-family:'Sofia-Pro';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +44,7 @@ h2 {
 
 .menuH .menuH-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -47,10 +53,10 @@ h2 {
 .menuH a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex: 1;
     text-align: center;
-    transition: color 0.3s;
+    transition: color 0.4s;
 }
 
 .menuH a:hover {
@@ -59,7 +65,6 @@ h2 {
 
 
 h1 {
-    font-family: 'Paris2024';
     font-size: 3em;
     margin-left: 0.25em;
     line-height: 90%;
@@ -71,33 +76,19 @@ h3 {
     font-size: 1.5em;
 }
 
-section > h1 ,nav h1{
-    color: #d9c27e;
-}
 
  
 /*backgound*/
 
 header {
-    background-image: url(../img/epreuve_header_bg.jpeg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    align-content: flex-end;
     height: 96px;
 }
-header figure {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4em;
+
+header img {
+    margin-left: 1em;
+    width: 3em;
 }
-header figure img {
-    width: 15em;
-}
-header figcaption {
-    font-family: 'Paris2024';
-    font-size: 7em;
-    color: #f2f2f2;
-}
+
  
 /*--------------------------*/
 /*-----------MAIN-----------*/
@@ -115,15 +106,16 @@ main section {
     padding-bottom: 12em;
 }
 
+
  
-main .AboutMe {
+.AboutMe {
     display: flex;
     align-items: center;
     justify-content: center; 
     
 }
 
-main .AboutMe img {      /* Photo de Profil */
+.AboutMe img {      /* Photo de Profil */
     margin-left:60px;
     width: 400px;    
     height: auto;         
@@ -132,69 +124,131 @@ main .AboutMe img {      /* Photo de Profil */
     border: 3px solid white; 
     box-shadow: 2px 2px 15px #007222;
 }
- 
-main article {
-    justify-content: center;
-    border-radius: 22px;
-    background-color: #002279;
-    font-size: 2em;
-    padding: 1em;
-    text-align: justify;
-}
- 
-main figure {
-    justify-items: center;
-    justify-self: center;
-    background-color: #dad5d5;
-    height: 10em;
-    width: 35em;
-    border-radius: 13px;
+
+.Presentation {
+    padding-top: 15em;
+    padding-bottom: 15em;
+    display: flex;
+    flex-direction: column;
+    gap: 13em;
 }
 
-.Informations img {
+.Presentation .ArticleLeft {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 45em;
+}
+
+.Presentation .ArticleRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 45em;
+}
+
+.Presentation article div {
+    background-color: #dad0d0;
+    border: solid #000000; 
+    border-radius: 13px;
+    height: 250px;
     width: 400px;
-    height: 400px;
+    box-shadow: 2px 2px 15px #000000;
 }
 
-.Informations {
-    width: 480px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
- 
-main figure img {
-    width: 35em;
-    height: 10em;
-    object-fit: cover;
-    border-radius: 13px;
-    z-index: -2;
-    margin-top: 0.5em;
-    margin-left: -0.5em;
-    transition: all 0.4s;
-}
- 
-main figure:hover img {
-    margin-left: -0em;
-    margin-top: -0em;
-}
- 
-main figure div {
-    width: 35em;
-    height: 10em;
-    z-index: -1;
-    background-color: #dad5d5;
-    border-radius: 13px;
+
+.Presentation a {
+    font-size: 1.5rem;
 }
 
-section article figure, section article figure img  {
-    width: 512px;
-    height: 288px;
+
+.Competences img {
+    width: 3em;
+    margin: 1em;
 }
 
-article p {
-    font-size: 1em;
+.Competences a:not(.GridTitle) {
+    color: #636383;
 }
- 
+
+.GridTitle {
+    color: green;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.Competences {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+.Competences div {
+    border: solid #a5a0a0;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------*/
 /*----------FOOTER----------*/
 /*--------------------------*/
