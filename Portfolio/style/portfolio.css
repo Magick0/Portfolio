@@ -85,12 +85,14 @@ header {
     position: fixed;
     width: 3em;
     right: 120px;
+    cursor: pointer;
 }
 
 .RU {
     position: fixed;
     width: 3em;
     right: 30px;
+    cursor: pointer;
 }
 
 
@@ -209,12 +211,13 @@ main section {
     color: #636383;
     margin-left:1em;
     margin-right:1em;
+    margin-top: 0.5em;
 }
 
 .GridTitle {
     color: green;
     font-size: 1.5rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .Competences {

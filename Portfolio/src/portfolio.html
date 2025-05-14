@@ -9,6 +9,8 @@
     </head>
 
     <body>
+
+        <script src="../script/langues.js"></script>
         
         <header>
             
@@ -16,12 +18,12 @@
                 
                 <div class="menuH-items">
                     <a href="#PRESENTATION">PRESENTATION</a>
-                    <a href="#COMPETENCES">COMPETENCES</a>
-                    <a href="#DIPLOMES">DIPLOMES</a>
+                    <a data-i18n="competences" href="#COMPETENCES">COMPETENCES</a>
+                    <a data-i18n="diplomes" href="#DIPLOMES">DIPLOMES</a>
                     <a href="#EXPERIENCES">EXPERIENCES</a>
                     <a href="#CONTACTS">CONTACTS</a>
-                    <img src="../img/france.png" alt="French" title="French" class="FR">
-                    <img src="../img/royaume-uni.png" alt="Anglish" title="Anglish" class="RU">
+                    <img src="../img/france.png" alt="French" title="French" class="FR" onclick="setLanguage('fr')" >
+                    <img src="../img/royaume-uni.png" alt="Anglish" title="Anglish" class="RU" onclick="setLanguage('en')" >
                 </div>
             </nav>
             
@@ -31,8 +33,8 @@
             <section class="AboutMe">
                 <div>
                     <h1>Titouan <br>Louis Renault </h1>
-                    <h2>Étudiant en inforatique spécialisé en développement logiciel<br> à la recherche d'une alternance de 12 mois </h2>
-                    <a href="LOUIS--RENAULT_Titouan_CV.pdf" download class="btn-cv">Télécharger mon CV</a>
+                    <h2 data-i18n="aboutme" >Étudiant en inforatique spécialisé en développement logiciel<br> à la recherche d'une alternance de 12 mois </h2>
+                    <a data-i18n="telechargementCV" href="LOUIS--RENAULT_Titouan_CV.pdf" download class="btn-cv">Télécharger mon CV</a>
                 </div>
                 <img src="../img/photoProfil.webp" alt="" title="">
    
@@ -44,8 +46,8 @@
             <section class="Presentation" >
 
                 <div class="container">
-                    <h2>À propos de moi</h2>
-                    <p>
+                    <h2 data-i18n="aboutmeTitle" >À propos de moi</h2>
+                    <p data-i18n="aboutmeText">
                     Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D, la physique et la musique.
                     </p>
                 </div>
@@ -58,38 +60,38 @@
 
                     <div>
                         <img src="../img/linternet.png" alt="Développement web" title="Développement web">
-                        <a class="GridTitle"> <strong>Développement web</strong></a>
-                        <a> Je possède une base de connaissances en développement Web et je sais utiliser plusieurs langages de programmation tels que HTML et CSS ainsi que la framework Bootstrap.</a>
+                        <strong> <a class="GridTitle" data-i18n="devWeb" > Développement web </a>  </strong>
+                        <a data-i18n="devWebCont" > Je possède une base de connaissances en développement Web et je sais utiliser plusieurs langages de programmation tels que HTML et CSS ainsi que la framework Bootstrap.</a>
                     </div>
 
                     <div>
                         <img src="../img/codage.png" alt="Développement Logiciel" title="Développement Logiciel">
-                        <a class="GridTitle"><strong>Développement Logiciel</strong></a>
-                        <a> Je suis capable de développer des logiciels en utilisant des langages tels que Java17, Python, C, javaFx ainsi que l'utilisation de Javafx Scene Builder.</a>
+                        <strong> <a class="GridTitle" data-i18n="devLog" > Développement Logiciel  </a>  </strong>
+                        <a data-i18n="devLogCont" > Je suis capable de développer des logiciels en utilisant des langages tels que Java17, Python, C, javaFx ainsi que l'utilisation de Javafx Scene Builder.</a>
                     </div>
 
                     <div>
                         <img src="../img/base-de-donnees.png" alt="Base de données" title="Base de données">
-                        <a class="GridTitle"> <strong>Base de données</strong></a>
-                        <a> Je possède une base de connaissances en base de données, je sais utiliser plusieurs logiciels tels que MySQL et Oracle. Je sais donc créer des schémas de base de données et les peupler.</a>
+                        <strong> <a class="GridTitle" data-i18n="bdd" >  Base de données  </a>  </strong>
+                        <a data-i18n="bddCont" > Je possède une base de connaissances en base de données, je sais utiliser plusieurs logiciels tels que MySQL et Oracle. Je sais donc créer des schémas de base de données et les peupler.</a>
                     </div>
 
                     <div>
                         <img src="../img/dossier.png" alt="Système" title="Système">
-                        <a class="GridTitle"> <strong>Système</strong></a>
-                        <a> Je possède une base de connaissances en maintenance Système et je sais utiliser plusieurs langages tels que PHP et Bash.</a>
+                        <strong> <a class="GridTitle" data-i18n="systeme" >  Système  </a>  </strong>
+                        <a data-i18n="systemeCont" > Je possède une base de connaissances en maintenance Système et je sais utiliser plusieurs langages tels que PHP et Bash.</a>
                     </div>
 
                     <div>
                         <img src="../img/service-reseau.png" alt="Service Réseau" title="Service Réseau">
-                        <a class="GridTitle"> <strong>Service Réseau</strong></a>
-                        <a> Je possède une base de connaissances en maintenance et en instalation de réseaux et je sais utiliser le logiciel Sisco Packet Tracer.</a>
+                        <strong> <a class="GridTitle" data-i18n="reseau" >  Service Réseau </a> </strong>
+                        <a data-i18n="reseauCont" > Je possède une base de connaissances en maintenance et en instalation de réseaux et je sais utiliser le logiciel Sisco Packet Tracer.</a>
                     </div>
 
                     <div>
                         <img src="../img/brain-process.png" alt="" title="">
-                        <a class="GridTitle"> <strong>Comparaison Alghorithmique</strong></a>
-                        <a>Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.</a>
+                        <strong> <a class="GridTitle" data-i18n="compAlgo" > Comparaison Alghorithmique  </a>  </strong>
+                        <a data-i18n="compAlgoCont" > Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.</a>
                     </div>
 
     
@@ -103,12 +105,12 @@
         <section>
             <div>
                 <ul class="contact-list">
-                <li>  <strong>Email :</strong> <a href="mailto:tlouisre56730@gmail.com">tlouisre56730@gmail.com</a>  </li>
-                <li>  <strong>Téléphone :</strong> 07 54 36 45 62</li>
+                <li>  <strong>mail :</strong> <a href="mailto:tlouisre56730@gmail.com">tlouisre56730@gmail.com</a>  </li>
+                <li>  <strong data-i18n="tel" >Téléphone :</strong> 07 54 36 45 62</li>
                 <li>  <a href="https://www.linkedin.com/in/titouan-louis-renault-623956356/" target="_blank" title="Visiter le site">  <img src="../img/linkedin.png" alt="Bouton image" class="image-button">  </a>  </li>
                 </ul>
             </div>
-            <p class="copyright">© 2025 Titouan Louis Renault — Tous droits réservés</p>
+            <p class="copyright" data-i18n="copyright">© 2025 Titouan Louis Renault — Tous droits réservés</p>
         </section>
     </footer>
 
