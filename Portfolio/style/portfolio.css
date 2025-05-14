@@ -81,10 +81,18 @@ header {
     height: 96px;
 }
 
-header img {
-    margin-left: 1em;
+.FR {
+    position: fixed;
     width: 3em;
+    right: 120px;
 }
+
+.RU {
+    position: fixed;
+    width: 3em;
+    right: 30px;
+}
+
 
  
 /*--------------------------*/
@@ -104,11 +112,16 @@ main section {
     margin: 2em;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 12em;
-    padding-bottom: 12em;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
-
+.separator {
+  width: 3px;
+  height: 80px; 
+  background-color: #000000; 
+  margin: 10px auto; 
+}
 
 /* AboutMe */
 
@@ -118,7 +131,6 @@ main section {
     display: flex;
     align-items: center;
     justify-content: center; 
-    
 }
 
 .AboutMe img {      /* Photo de Profil */
@@ -156,41 +168,30 @@ main section {
 
 
 .Presentation {
-    padding-top: 15em;
-    padding-bottom: 15em;
-    display: flex;
-    flex-direction: column;
-    gap: 13em;
+  
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.Presentation .ArticleLeft {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 45em;
+.Presentation .container {
+  max-width: 800px;
+  border: solid #a5a0a0;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 255, 100, 0.05);
 }
 
-.Presentation .ArticleRight {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 45em;
+.Presentation h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #23741c;
+  font-weight: 600;
 }
 
-.Presentation article div {
-    border: solid #a5a0a0;   
-    height: 250px;
-    width: 400px;
-}
-
-.Presentation a {
-    color: #636383;
-}
-
-.Presentation a {
-    font-size: 1.5rem;
+.Presentation p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #636383;
 }
 
 
@@ -288,106 +289,60 @@ main section {
 
 
 
+
+
+
+
 /*--------------------------*/
 /*----------FOOTER----------*/
 /*--------------------------*/
- 
-footer {
-    border-left: #720000 solid 3px;
-    border-right: #720000 solid 3px;
-    justify-self: center;
-    margin-bottom: -10em;
+
+
+.Contact {
+  padding: 40px 20px;
+  border-top: 2px solid #a5a0a0;
+  text-align: center;
 }
- 
-/*partenaires*/
-footer article:first-child {
-    display: flex;
-    background-color: #f2f2f2;
-    justify-content: center;
+
+.Contact .contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  flex-wrap: wrap; 
 }
- 
-footer tr, footer td {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.Contact .contact-list li {
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-footer article:first-child img {
-    width: 13em;
-    height: 18em;
-    object-fit: contain;
-    margin: 0  2.5em 0 2.5em;
+
+.Contact .contact-list a {
+  color: #0073e6;
+  text-decoration: none;
 }
- 
-/*vrai footer*/
-footer article:not(:first-child) {
-    background-color: #0d0d0d;
-    color: #f2f2f2;
+
+.Contact .contact-list a:hover {
+  text-decoration: underline;
 }
- 
-footer section {
-    display: flex;
-    padding: 0;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
-    justify-self: center;
-    padding: 3em;
+
+.Contact .image-button {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
 }
- 
-footer section img {
-    width: 9em;
-    height: 9em;
+
+.Contact .image-button:hover {
+  transform: scale(1.1);
 }
- 
-footer section div {
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f2;
-    color: #0d0d0d;
-    border-radius: 13px;
-    height: 5em;
-    width: 25em;
-    justify-content: space-around;
-}
-footer section div h3 {
-    font-size: em;
-    font-weight: bold;
-}
-footer section div img {
-    width: 3.5em;
-    height: auto;
-}
- 
-footer section tr {
-    width: 19em;
-    justify-content: space-between;
-}
-footer section table img {
-    width: 3.5em;
-    height: auto;
-}
- 
-footer hr {
-    width: 75%;
-}
- 
-footer ul {
-    height: 4em;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    justify-self: center;
-    align-items: center;
-}
-footer li {
-    font-weight: bold;
-    align-items: center;
-}
-footer li:hover a {
-    color: #d9c27e;
-    transition: color 0.3s;
-}
-footer li a {
-    text-decoration: none;
-    color: #f2f2f2;
+
+.Contact .copyright {
+  font-size: 14px;
+  color: #999;
+  margin-top: 20px;
 }
