@@ -76,6 +76,23 @@ h3 {
     font-size: 1.5em;
 }
 
+.btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(130deg, #000000, #34aa29);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
+}
 
  
 /*backgound*/
@@ -115,6 +132,7 @@ main section {
     
 }
 
+
 .AboutMe img {      /* Photo de Profil */
     margin-left:60px;
     width: 400px;    
@@ -124,6 +142,7 @@ main section {
     border: 3px solid white; 
     box-shadow: 2px 2px 15px #007222;
 }
+
 
 .Presentation {
     padding-top: 15em;
@@ -171,6 +190,8 @@ main section {
 
 .Competences a:not(.GridTitle) {
     color: #636383;
+    margin-left:1em;
+    margin-right:1em;
 }
 
 .GridTitle {
@@ -185,6 +206,8 @@ main section {
     align-items: center;
     justify-content: center;
     gap: 5em;
+    margin-left: 190px;
+    margin-right: 190px;
 }
 
 .Competences div {
