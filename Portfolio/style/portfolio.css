@@ -34,7 +34,7 @@ html {
     align-items: center;
     background-color: black;
     font-weight: bold;
-    height: 6em;
+    height: 5em;
     position: fixed;
     width: 100%;
     top: 0;
@@ -60,9 +60,10 @@ html {
 }
 
 .menuH a:hover {
-    color: #34aa29;
+    color: #23741c;
 }
 
+/*N/A*/
 
 h1 {
     font-size: 3em;
@@ -70,31 +71,10 @@ h1 {
     line-height: 90%;
 }
 
-
-
 h3 {
     font-size: 1.5em;
 }
 
-.btn-cv {
-  display: inline-block;
-  padding: 12px 24px;
-  background: linear-gradient(130deg, #000000, #34aa29);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-cv:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
-}
-
- 
 /*backgound*/
 
 header {
@@ -112,8 +92,13 @@ header img {
 /*--------------------------*/
 
 
+
+/* Global */
+
+
+
 main section {
-    border: #ffffff solid 3px;                              /*  bordures  */
+    border: #ffffff solid 3px;             /*  bordures  */
     justify-content: center;
     align-content: center;
     margin: 2em;
@@ -124,14 +109,17 @@ main section {
 }
 
 
- 
+
+/* AboutMe */
+
+
+
 .AboutMe {
     display: flex;
     align-items: center;
     justify-content: center; 
     
 }
-
 
 .AboutMe img {      /* Photo de Profil */
     margin-left:60px;
@@ -140,8 +128,31 @@ main section {
     object-fit: cover;    
     border-radius: 45%;  
     border: 3px solid white; 
-    box-shadow: 2px 2px 15px #007222;
+    box-shadow: 2px 2px 15px #23741c;
 }
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(130deg, #000000, #23741c);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
+}
+
+
+
+/* Présentation */
+
 
 
 .Presentation {
@@ -169,18 +180,23 @@ main section {
 }
 
 .Presentation article div {
-    background-color: #dad0d0;
-    border: solid #000000; 
-    border-radius: 13px;
+    border: solid #a5a0a0;   
     height: 250px;
     width: 400px;
-    box-shadow: 2px 2px 15px #000000;
 }
 
+.Presentation a {
+    color: #636383;
+}
 
 .Presentation a {
     font-size: 1.5rem;
 }
+
+
+
+/* Compétences */
+
 
 
 .Competences img {
