@@ -2,7 +2,8 @@
 const translations = {
 fr: {
     competences: "COMPETENCES",
-    diplomes: "DIPLOMES",
+    diplomes: "PARCOURS",
+    projets: "PROJETS",
     aboutme: "Étudiant en inforatique spécialisé en développement logiciel <br> à la recherche d'une alternance de 12 mois",
     telechargementCV: "Télécharger mon CV",
     aboutmeTitle: "À propos de moi",
@@ -24,7 +25,8 @@ fr: {
 },
 en: {
     competences: "SKILLS",
-    diplomes: "DEGREE",
+    diplomes: "CAREER",
+    projets: "PROJECTS",
     aboutme: "Computer science student specialized in software development<br> looking for a 12-month internship",
     telechargementCV: "Download my CV",
     aboutmeTitle: "About Me",
