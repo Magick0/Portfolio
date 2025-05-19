@@ -319,10 +319,71 @@ main section {
 }
 
 
+/* Projets */
 
 
+.Projets img {
+    width: 3em;
+    margin: 1em;
+}
+
+.Projets a:not(.GridTitle) {
+    color: #636383;
+    margin-left:1em;
+    margin-right:1em;
+    margin-top: 0.5em; 
+}
 
 
+ul {
+  list-style: none;
+  padding-left: 1.5em; /* espace pour la fausse puce */
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.5em; /* espace pour l'image */
+  margin-bottom: 0.5em;
+  text-align: left; /* aligne le texte à gauche */
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 0.75em;
+  height: 0.75em;
+  background-image: url('../img/fleche-droite.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Projets {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+.Projets div {
+    border: solid #a5a0a0;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+.Projets div:hover {
+  transform: scale(1.02);
+}
 
 
 
