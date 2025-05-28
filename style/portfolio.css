@@ -1,5 +1,5 @@
 
-figure, h1, img, figcaption {
+figure, h1, img, figcaption, a {
     user-select: none;
 }
  
@@ -8,7 +8,7 @@ body {
     font-family:"Bai Jamjuree", sans-serif;       /*'Sofia-Pro'*/
     color: #0d0d0d;
     overflow-x: hidden;
-    background-image: url();
+    
     text-decoration: none;
     flex: 1;
     text-align: center;  
@@ -116,7 +116,7 @@ header {
 
 
 main section {
-    border: #ffffff solid 3px;             /*  bordures  */
+    border: #ffffff00 solid 3px;             /*  bordures  */
     justify-content: center;
     align-content: center;
     margin: 2em;
@@ -127,8 +127,8 @@ main section {
 }
 
 .separator {
-  width: 3px;
-  height: 80px; 
+  width: 80px;
+  height: 3px; 
   background-color: #000000; 
   margin: 10px auto; 
 }
@@ -141,6 +141,11 @@ main section {
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+
+.AboutMe h2 {
+  text-align: left;
+  margin-bottom: 1em;
 }
 
 .AboutMe img {      /* Photo de Profil */
@@ -220,6 +225,7 @@ main section {
     margin-left:1em;
     margin-right:1em;
     margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 .GridTitle {
@@ -241,7 +247,7 @@ main section {
 .Competences div {
     border: solid #a5a0a0;
     width: 300px;
-    height: 350px;
+    height: 420px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -351,7 +357,7 @@ ul li {
   text-align: left; /* aligne le texte à gauche */
 }
 
-ul li::before {
+.Projets ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -376,7 +382,7 @@ ul li::before {
 .Projets div {
     border: solid #a5a0a0;
     width: 300px;
-    height: 450px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -394,6 +400,7 @@ ul li::before {
 .btnVoirPLus {
   display: inline-block;
   padding: 12px 24px;
+  margin-bottom: 1em;
   background: linear-gradient(130deg, #000000, #23741c);
   color: rgb(243, 243, 243);
   font-weight: bold;
@@ -476,49 +483,6 @@ ul li::before {
 .contenuModal li {
   margin-bottom: 6px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
