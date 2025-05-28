@@ -3,7 +3,7 @@ figure, h1, img, figcaption, a {
     user-select: none;
 }
  
-body {
+body:not(.Nom) {
     margin: -0;
     font-family:"Bai Jamjuree", sans-serif;       /*'Sofia-Pro'*/
     color: #0d0d0d;
@@ -16,8 +16,16 @@ body {
 
 }
 
+
+
 html {
-    scroll-behavior: smooth;
+  --s: 120px; /* control the size */
+  
+  background:
+    conic-gradient(from 150deg at 50% 33%,#0000,#c7c7c7 .5deg 60deg,#0000 60.5deg) 
+      calc(var(--s)/2) calc(var(--s)/1.4),
+    conic-gradient(from -30deg at 50% 66%,#3b3b3b00,#b3bdb0 .5deg 60deg,#dbdbdb 60.5deg);
+  background-size: var(--s) calc(var(--s)/1.154);
 }
  
  
@@ -32,7 +40,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     font-weight: bold;
     height: 5em;
     position: fixed;
@@ -69,6 +77,7 @@ h1 {
     font-size: 3em;
     margin-left: 0.25em;
     line-height: 90%;
+    text-shadow: 5px 5px 1px #77a16d;
 }
 
 h3 {
@@ -111,8 +120,9 @@ header {
 
 
 
-/* Global */
+		
 
+/* Global */
 
 
 main section {
@@ -122,15 +132,26 @@ main section {
     margin: 2em;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10em;
-    padding-bottom: 10em;
+    padding-top: 8em;
+    padding-bottom: 8em;
 }
 
 .separator {
   width: 80px;
   height: 3px; 
-  background-color: #000000; 
+  background-color: #5c5c5c; 
   margin: 10px auto; 
+}
+
+div .separator {
+  width: 80px;
+  height: 3px; 
+  background-color: #5c5c5c; 
+  margin: 10px auto; 
+}
+
+.Presentation div, .Competences div:not(.separator), .Parcours div, .Projets div, .Contact{
+  background-color: rgb(248, 240, 240);
 }
 
 /* AboutMe */
@@ -146,6 +167,7 @@ main section {
 .AboutMe h2 {
   text-align: left;
   margin-bottom: 1em;
+  text-shadow: 5px 5px 1px #ffffff;
 }
 
 .AboutMe img {      /* Photo de Profil */
@@ -155,8 +177,9 @@ main section {
     object-fit: cover;    
     border-radius: 45%;  
     border: 3px solid white; 
-    box-shadow: 2px 2px 15px #23741c;
+    box-shadow: 0px 0px 10px #000000;
 }
+
 
 .btn-cv {
   display: inline-block;
@@ -191,9 +214,9 @@ main section {
 
 .Presentation .container {
   max-width: 800px;
-  border: solid #a5a0a0;
+  border: solid #aaaaaa;
   padding: 40px;
-  box-shadow: 0 0 30px rgba(0, 255, 100, 0.05);
+  box-shadow: 0px 0px 10px #a1a1a1;
 }
 
 .Presentation h2 {
@@ -244,8 +267,8 @@ main section {
     margin-right: 190px;
 }
 
-.Competences div {
-    border: solid #a5a0a0;
+.Competences div:not(.separator) {
+    border: solid #aaaaaa;
     width: 300px;
     height: 420px;
     display: flex;
@@ -254,9 +277,10 @@ main section {
     align-items: center;
     transform: scale(1);
     transition: transform 0.2s ease;
+    box-shadow: 0px 0px 10px #a1a1a1;
 }
 
-.Competences div:hover {
+.Competences div:hover:not(.separator) {
   transform: scale(1.02);
 }
 
@@ -270,7 +294,7 @@ main section {
     margin: 0 2em 0 2em;
     object-fit: cover;    
     border-radius: 50%;  
-    border: 2px solid #a5a0a0; 
+    border: solid #aaaaaa; 
     
 }
 
@@ -296,7 +320,7 @@ main section {
 }
 
 .ParcLeft, .ParcRight {
-    border: 2px solid #a5a0a0;
+    border: 2px solid #aaaaaa;
     border-radius: 13px;
     width: 750px;
     height: 350px;
@@ -305,6 +329,7 @@ main section {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
+    box-shadow: 0px 0px 10px #a1a1a1;
 }
 
 
@@ -377,10 +402,11 @@ ul li {
     gap: 5em;
     margin-left: 190px;
     margin-right: 190px;
+    
 }
 
 .Projets div {
-    border: solid #a5a0a0;
+    border: solid #aaaaaa;
     width: 300px;
     height: auto;
     display: flex;
@@ -389,6 +415,7 @@ ul li {
     align-items: center;
     transform: scale(1);
     transition: transform 0.2s ease;
+    box-shadow: 0px 0px 10px #a1a1a1;
 }
 
 .Projets div:hover {
@@ -493,8 +520,10 @@ ul li {
 
 .Contact {
   padding: 40px 20px;
-  border-top: 2px solid #a5a0a0;
+  border-top: 2px solid #aaaaaa;
   text-align: center;
+  height: 70px;
+  background-color: #dbdbdb;
 }
 
 .Contact .contact-list {
