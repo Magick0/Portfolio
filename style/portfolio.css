@@ -26,6 +26,8 @@ html {
       calc(var(--s)/2) calc(var(--s)/1.4),
     conic-gradient(from -30deg at 50% 66%,#3b3b3b00,#b3bdb0 .5deg 60deg,#dbdbdb 60.5deg);
   background-size: var(--s) calc(var(--s)/1.154);
+
+  scroll-behavior: smooth;
 }
  
  
@@ -477,79 +479,93 @@ ul li {
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
   overflow: auto;
+  padding: 40px 0;
 }
 
+.etapes {
+  text-align: left;
+}
 
 .modal-content {
-  background-color: #444;
-  color: #f1f1f1;
-  margin: 5% auto;
-  padding: 30px;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
   width: 60%;
   max-width: 800px;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  box-shadow: 0 10px 30px rgb(48, 41, 41);
-  animation: fadeInModal 0.3s ease-out;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: fadeInModal 0.4s ease;
+  position: relative;
 }
 
 @keyframes fadeInModal {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
 }
 
 .close {
-  float: right;
-  font-size: 26px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 6px 12px;
+  font-size: 20px;
   cursor: pointer;
-  color: #aaa;
-  transition: color 0.2s;
+  transition: transform 0.2s ease;
 }
 .close:hover {
-  color: #f55;
+  transform: scale(1.1);
 }
 
-.contenuModal {
-  text-align: left;
-  line-height: 1.6;
-  color: #e0e0e0;
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #23741c;
+  border-bottom: 2px solid #23741c;
+  padding-bottom: 10px;
 }
 
 .contenuModal h3 {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: #23741c;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #77a16d;
 }
 
 .contenuModal p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #ecf0f1;
 }
 
-.contenuModal ul {
-  padding-left: 20px;
-  list-style-type: disc;
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
 }
-
-.contenuModal li {
-  margin-bottom: 6px;
-}
-
-
 
 /*--------------------------*/
 /*----------FOOTER----------*/

@@ -68,7 +68,7 @@
             <div class="separator"></div>
 
 
-            <section class="Competences" id="COMPETENCES">
+            <!-- <section class="Competences" id="COMPETENCES">
 
                     <div>
                         <img src="img/linternet.png" alt="Développement web" title="Développement web">
@@ -110,6 +110,52 @@
                         <strong> <a class="GridTitle" data-i18n="compAlgo" > Comparaison Alghorithmique  </a>  </strong>
                         <div class="separator"></div>
                         <a data-i18n="compAlgoCont" > Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.</a>
+                    </div>
+
+            </section> -->
+
+            <section class="Competences" id="COMPETENCES">
+
+                    <div>
+                        <img src="img/snake.svg" alt="Développement web" title="Développement web">
+                        <strong> <a class="GridTitle" data-i18n="devWeb" > Implémentation d'un besoin client </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devWebCont" > Je peux développer des applications informatiques simples tels qu'un jeu de snake.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/algorithme.png" alt="Développement Logiciel" title="Développement Logiciel">
+                        <strong> <a class="GridTitle" data-i18n="devLog" > Comparaison d'algorithmes  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devLogCont" > Je suis capable d'appréhender et de construire des algorithmes.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/computer.png" alt="Base de données" title="Base de données">
+                        <strong> <a class="GridTitle" data-i18n="bdd" >  Installation de poste  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="bddCont" > Je possède une base de connaissances pour installer et configurer un poste de travail.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/base-de-donnees.png" alt="Système" title="Système">
+                        <strong> <a class="GridTitle" data-i18n="systeme" >  Création de bases de données  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="systemeCont" > Je suis capable de concevoir et mettre en place une base de données à partir d'un cahier des charges client.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/service-reseau.png" alt="Service Réseau" title="Service Réseau">
+                        <strong> <a class="GridTitle" data-i18n="reseau" >  Recueil de besoins </a> </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="reseauCont" > Je possède une base de connaissances pour identifier les besoins métiers des clients et des utilisateurs.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/euro.png" alt="" title="">
+                        <strong> <a class="GridTitle" data-i18n="compAlgo" > Environnement économique  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="compAlgoCont" > Je peux identifier mes aptitudes pour travailler dans une équipe.</a>
                     </div>
 
             </section>
@@ -268,13 +314,13 @@
 
             <div id="modal1" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <h2 data-i18n="Snake">Jeu du Snake</h2>
+                    <button class="close" onclick="closeModal('modal1')">&times;</button>
+                    <h2 data-i18n="Snake">  Jeu du Snake</h2>
                     <div class="contenuModal">
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="SnakeObjCont">Conceptualiser et développer un jeu de snake en langage C a partir d'un cahier des charges. Remplire des batteries de tests. </p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="SnakeDéroul">étape 1 : maquette <br> étape 2 : cahier de tests <br> étape 3 : algorithme et décomposition <br> étape 4 : code source <br> étape 5 : traces d'exécution</p>
+                        <p data-i18n="SnakeDéroul" class="etapes" >étape 1 : maquette <br> étape 2 : cahier de tests <br> étape 3 : algorithme et décomposition <br> étape 4 : code source <br> étape 5 : traces d'exécution</p>
                     </div>
                 </div>
             </div>
@@ -288,7 +334,8 @@
                         <p data-i18n="InstPosDevObj">Exploitation de conteneurs Docker 'utilitaires' et création d'un Workflow chaînant ces conteneurs. L'objectif était la mise en place de briques logicielles s'intégrant à un environnement de développement complexe. Ces briques logicielles conteneurisées formaient un mécanisme quasi-automatique redéployable, à peu de frais (temps et compétences), ultérieurement et/ou par d'autres développeurs.
                     Le projet permettait de générer des PDF de rapports commerciaux régionaux d'une entreprise.</p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="InstPosDevDéroul">Installation d'un poste pour le développement : mise en œuvre d'une chaîne de processus (workflow) s'intégrant dans un environnement de développement.<br>
+                        <p data-i18n="InstPosDevDéroul" class="etapes" >
+                            Installation d'un poste pour le développement : mise en œuvre d'une chaîne de processus (workflow) s'intégrant dans un environnement de développement.<br>
                             étape 1 : Identifier les outils nécessaires<br>
                             étape 2 : Préparation des fichiers de test (donnés et configs)<br>
                             étape 3 : Proposition d'un workflow enchaînant les outils<br>
@@ -305,7 +352,8 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="CreatBDDFootObj">Création d'une base de donnée simulant le fonctionnement de ligues et de saisons du Football. </p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="CreatBDDFootDéroul">étape 1 : critique de la base de données existante + proposition d'un nouveau modèle (incluant les correstions) et sa transformation en modèle relationnel (script SQL)<br>
+                        <p data-i18n="CreatBDDFootDéroul" class="etapes" >
+                            étape 1 : critique de la base de données existante + proposition d'un nouveau modèle (incluant les correstions) et sa transformation en modèle relationnel (script SQL)<br>
                             étape 2 : répondre aux différentes requêtes (livrable sous forme de script SQL)<br>
                             étape 3 : extension de la base de données (diagramme de classe + implémentation SQL) + proposition d'un jeu de données test pour peupler la nouvelle base de données</p><br>
                     </div>
@@ -320,7 +368,8 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="CreatWEBObj">Création d'un site web pour les J-O 2024 sur un sport en particulier. Maquettage et développement HTML, CSS et JavaScript.</p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="CreatWEBDéroul">étape 1 : Organisation d'équipe : répartition du travail, rôles....<br>
+                        <p data-i18n="CreatWEBDéroul" class="etapes" >
+                            étape 1 : Organisation d'équipe : répartition du travail, rôles....<br>
                             étape 1 : Compréhension et rédaction des besoins<br>
                             étape 1 : Réalisation de l'arborescence<br>
                             étape 1 : Création de la charte graphique<br>
@@ -339,7 +388,7 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="DévAPPObj"> Conception, gestion et développement d'un logiciel de gestion d'une association de dance. </p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="DévAPPDéroul">étape 1 : Rédaction SEL <br>étape 2 : Organigrame tâches <br> étape 3 : Matrice RACI <br> étape 4 : Estimation des charges <br> étape 5 : Maquettage <br> étape 6 : Développement</p>
+                        <p data-i18n="DévAPPDéroul" class="etapes">étape 1 : Rédaction SEL <br>étape 2 : Organigrame tâches <br> étape 3 : Matrice RACI <br> étape 4 : Estimation des charges <br> étape 5 : Maquettage <br> étape 6 : Développement</p>
                     </div>
                 </div>
             </div>
@@ -352,7 +401,7 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="InstServResObj">Création et configuration d'un environnement appache pour mettre en oeuvre un site et l'automatiser.</p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="InstServResDéroul">étape 1 : création serveur <br> étape 2 : configuration apache <br> étape 3 : création de scripts d'automatisation </p>
+                        <p data-i18n="InstServResDéroul" class="etapes" >étape 1 : création serveur <br> étape 2 : configuration apache <br> étape 3 : création de scripts d'automatisation </p>
                     </div>
                 </div>
             </div>
@@ -365,7 +414,7 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="ExplBDDObj">Implémentation et peuplement d'un shéma relationel. Exploitation et analyse des données. </p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="ExplBDDDéroul">étape 1 : Traduction/implantation d'un schéma relationnel <br> étape 2 : Peuplement de la base de données <br> étape 3 : Exploitation de la base de données<br> étape 4 : Analyse statistique des données </p>
+                        <p data-i18n="ExplBDDDéroul" class="etapes" >étape 1 : Traduction/implantation d'un schéma relationnel <br> étape 2 : Peuplement de la base de données <br> étape 3 : Exploitation de la base de données<br> étape 4 : Analyse statistique des données </p>
                     </div>
                 </div>
             </div>
@@ -378,7 +427,7 @@
                         <h3 data-i18n="Obj"> Objectifs </h3>
                         <p data-i18n="GestProjObj">Tournage et montage d'une vidéo de promotion d'un team building sur l'Ile de Bréhat.</p>
                         <h3 data-i18n="Déroul"> Déroulement </h3>
-                        <p data-i18n="GestProjDéroul">étape 1 : Rédaction d'un rapport d'organisation <br> étape 2 : Création d'une infographie <br> étape 3 : Tournage d'une vidéo de promotion <br> étape 4 : Montage d'une vidéo de promotion</p>
+                        <p data-i18n="GestProjDéroul" class="etapes" >étape 1 : Rédaction d'un rapport d'organisation <br> étape 2 : Création d'une infographie <br> étape 3 : Tournage d'une vidéo de promotion <br> étape 4 : Montage d'une vidéo de promotion</p>
                     </div>
                 </div>
             </div>
