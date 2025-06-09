@@ -342,6 +342,8 @@ div .separator {
     color: #636383;
     margin-left:1em;
     margin-right:1em;
+    margin-bottom:1em;
+
 }
 
 .Date {
@@ -363,7 +365,7 @@ div .separator {
     border: 2px solid #aaaaaa;
     border-radius: 13px;
     width: 750px;
-    height: 350px;
+    height: 375px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -544,7 +546,7 @@ ul li {
 .modal-content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #23741c;
+  color: white;
   border-bottom: 2px solid #23741c;
   padding-bottom: 10px;
 }
