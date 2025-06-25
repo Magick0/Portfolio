@@ -12,41 +12,41 @@ fr: {
     aboutmeText: "Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D, la physique et la musique.",
     
     
-    // devWeb: "Développement web",
-    // devWebCont: "Je possède une base de connaissances en développement Web et je sais utiliser plusieurs langages de programmation tels que HTML et CSS ainsi que la framework Bootstrap.",
+    devWeb: "Développement web",
+    devWebCont: "Je possède une base de connaissances en développement Web et je sais utiliser plusieurs langages de programmation tels que HTML et CSS ainsi que la framework Bootstrap.",
     
-    // devLog: "Développement Logiciel",
-    // devLogCont: "Je suis capable de développer des logiciels en utilisant des langages tels que Java17, Python, C, javaFx ainsi que l'utilisation de Javafx Scene Builder.",
+    devLog: "Développement Logiciel",
+    devLogCont: "Je suis capable de développer des logiciels en utilisant des langages tels que Java17, Python, C, javaFx ainsi que l'utilisation de Javafx Scene Builder.",
     
-    // bdd: "Base de données",
-    // bddCont: "Je possède une base de connaissances en base de données, je sais utiliser plusieurs logiciels tels que MySQL et Oracle. Je sais donc créer des schémas de base de données et les peupler.",
+    bdd: "Base de données",
+    bddCont: "Je possède une base de connaissances en base de données, je sais utiliser plusieurs logiciels tels que MySQL et Oracle. Je sais donc créer des schémas de base de données et les peupler.",
     
-    // systeme: "Système",
-    // systemeCont: "Je possède une base de connaissances en maintenance Système et je sais utiliser plusieurs langages tels que PHP et Bash.",
+    systeme: "Système",
+    systemeCont: "Je possède une base de connaissances en maintenance Système et je sais utiliser plusieurs langages tels que PHP et Bash.",
     
-    // reseau:"Service Réseau",
-    // reseauCont:"Je possède une base de connaissances en maintenance et en instalation de réseaux et je sais utiliser le logiciel Sisco Packet Tracer.",
+    reseau:"Service Réseau",
+    reseauCont:"Je possède une base de connaissances en maintenance et en instalation de réseaux et je sais utiliser le logiciel Sisco Packet Tracer.",
     
-    // compAlgo: "Comparaison Alghorithmique",
-    // compAlgoCont: "Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.",
+    compAlgo: "Comparaison Alghorithmique",
+    compAlgoCont: "Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.",
 
-    devWeb: "Implémentation d'un besoin client",
-    devWebCont: "Je peux développer des applications informatiques simples tels qu'un jeu de snake.",
+    // devWeb: "Implémentation d'un besoin client",
+    // devWebCont: "Je peux développer des applications informatiques simples tels qu'un jeu de snake.",
     
-    devLog: "Comparaison d'algorithmes",
-    devLogCont: "Je suis capable d'appréhender et de construire des algorithmes.",
+    // devLog: "Comparaison d'algorithmes",
+    // devLogCont: "Je suis capable d'appréhender et de construire des algorithmes.",
     
-    bdd: "Installation de poste",
-    bddCont: "Je possède une base de connaissances pour installer et configurer un poste de travail.",
+    // bdd: "Installation de poste",
+    // bddCont: "Je possède une base de connaissances pour installer et configurer un poste de travail.",
     
-    systeme: "Création de bases de données",
-    systemeCont: "Je suis capable de concevoir et mettre en place une base de données à partir d'un cahier des charges client.",
+    // systeme: "Création de bases de données",
+    // systemeCont: "Je suis capable de concevoir et mettre en place une base de données à partir d'un cahier des charges client.",
     
-    reseau:"Recueil de besoins",
-    reseauCont:"Je possède une base de connaissances pour identifier les besoins métiers des clients et des utilisateurs.",
+    // reseau:"Recueil de besoins",
+    // reseauCont:"Je possède une base de connaissances pour identifier les besoins métiers des clients et des utilisateurs.",
     
-    compAlgo: "Environnement économique",
-    compAlgoCont: "Je peux identifier mes aptitudes pour travailler dans une équipe.",
+    // compAlgo: "Environnement économique",
+    // compAlgoCont: "Je peux identifier mes aptitudes pour travailler dans une équipe.",
 
 
  
@@ -132,41 +132,41 @@ en: {
     aboutmeText: "My name is Titouan, I am 18 years old and currently a first-year computer science student at the IUT of Lannion. I'm curious about many things, but what I love most is software development. I'm passionate about astronomy, video games, climbing and physics. I also enjoy psychology, 3D graphics, and music.",
     
     
-    // devWeb: "Web Development",
-    // devWebCont: "I have a foundational knowledge of web development and can use various programming languages like HTML and CSS as well as the Bootstrap framework.",
+    devWeb: "Web Development",
+    devWebCont: "I have a foundational knowledge of web development and can use various programming languages like HTML and CSS as well as the Bootstrap framework.",
     
-    // devLog: "Software Development",
-    // devLogCont: "I am capable of developing software using languages such as Java17, Python, C, and JavaFX, including the use of JavaFX Scene Builder.",
+    devLog: "Software Development",
+    devLogCont: "I am capable of developing software using languages such as Java17, Python, C, and JavaFX, including the use of JavaFX Scene Builder.",
     
-    // bdd: "DataBases",
-    // bddCont: "I have basic knowledge of databases, and I can use tools like MySQL and Oracle. I can design and populate database schemas.",
+    bdd: "DataBases",
+    bddCont: "I have basic knowledge of databases, and I can use tools like MySQL and Oracle. I can design and populate database schemas.",
     
-    // systeme: "Systems",
-    // systemeCont: "I have some experience in system maintenance and can work with languages like PHP and Bash.",
+    systeme: "Systems",
+    systemeCont: "I have some experience in system maintenance and can work with languages like PHP and Bash.",
     
-    // reseau:"Network Services",
-    // reseauCont:"I have basic knowledge in network installation and maintenance, and I am familiar with Cisco Packet Tracer.",
+    reseau:"Network Services",
+    reseauCont:"I have basic knowledge in network installation and maintenance, and I am familiar with Cisco Packet Tracer.",
     
-    // compAlgo: "Algorithmic Thinking",
-    // compAlgoCont: "I can approach a wide range of problems using algorithmic thinking.",
+    compAlgo: "Algorithmic Thinking",
+    compAlgoCont: "I can approach a wide range of problems using algorithmic thinking.",
 
-    devWeb: "Implementation of a client requirement",
-    devWebCont: "I can develop simple software applications such as a snake game.",
+    // devWeb: "Implementation of a client requirement",
+    // devWebCont: "I can develop simple software applications such as a snake game.",
 
-    devLog: "Algorithm comparison",
-    devLogCont: "I am able to understand and construct algorithms.",
+    // devLog: "Algorithm comparison",
+    // devLogCont: "I am able to understand and construct algorithms.",
 
-    bdd: "Workstation setup",
-    bddCont: "I have basic knowledge to install and configure a workstation.",
+    // bdd: "Workstation setup",
+    // bddCont: "I have basic knowledge to install and configure a workstation.",
 
-    systeme: "Database creation",
-    systemeCont: "I am capable of designing and implementing a database based on client specifications.",
+    // systeme: "Database creation",
+    // systemeCont: "I am capable of designing and implementing a database based on client specifications.",
 
-    reseau: "Requirements gathering",
-    reseauCont: "I have basic knowledge to identify business needs of clients and users.",
+    // reseau: "Requirements gathering",
+    // reseauCont: "I have basic knowledge to identify business needs of clients and users.",
 
-    compAlgo: "Economic environment",
-    compAlgoCont: "I can identify my skills for working in a team.",
+    // compAlgo: "Economic environment",
+    // compAlgoCont: "I can identify my skills for working in a team.",
 
     
 
@@ -236,6 +236,7 @@ en: {
 }
 };
 
+
 function setLanguage(lang) {
 document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
@@ -276,3 +277,17 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+
+$(document).ready(function() {
+    $(".checkbox").change(function() {
+        if ($(this).is(":checked")) {
+            setLanguage('en');
+        } else {
+            setLanguage('fr');
+        }
+    });
+});
+
+

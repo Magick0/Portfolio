@@ -12,7 +12,8 @@
 
     <body>
 
-        <script src="script/langues.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script/code.js"></script>
         
         <header>
             <nav class="menuH">
@@ -22,8 +23,15 @@
                     <a href="#PARCOURS" data-i18n="diplomes"        >PARCOURS</a>
                     <a href="#PROJETS" data-i18n="projets"          >PROJETS</a>
                     <a href="#CONTACTS"                             >CONTACTS</a>
-                    <img src="img/france.png"       alt="French"  title="French"  class="FR" onclick="setLanguage('fr')" >
-                    <img src="img/royaume-uni.png"  alt="Anglish" title="English" class="RU" onclick="setLanguage('en')" >
+                    <div class="toggle-button-cover">
+                        <div class="button-cover">
+                            <div class="button r" id="button-3">
+                                <input type="checkbox" class="checkbox" />
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+                    </div>
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
                 </div>
                 <div id="mobile-menu" class="mobile-menu">
@@ -52,6 +60,8 @@
 
             <div class="separator"></div>
 
+            
+
 
             <section class="Presentation" >
 
@@ -68,7 +78,7 @@
             <div class="separator"></div>
 
 
-            <!-- <section class="Competences" id="COMPETENCES">
+            <section class="Competences" id="COMPETENCES">
 
                     <div>
                         <img src="img/linternet.png" alt="Développement web" title="Développement web">
@@ -112,9 +122,9 @@
                         <a data-i18n="compAlgoCont" > Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.</a>
                     </div>
 
-            </section> -->
+            </section>
 
-            <section class="Competences" id="COMPETENCES">
+            <!-- <section class="Competences" id="COMPETENCES">
 
                     <div>
                         <img src="img/snake.svg" alt="Développement web" title="Développement web">
@@ -158,7 +168,7 @@
                         <a data-i18n="compAlgoCont" > Je peux identifier mes aptitudes pour travailler dans une équipe.</a>
                     </div>
 
-            </section>
+            </section> -->
 
 
             <div class="separator"></div>
@@ -166,14 +176,14 @@
 
             <section class="Parcours" id="PARCOURS">
 
-                    <div class="ParcLeft">
-                        <img src="img/logo-st-paul-st-georges.svg" alt="Logo Saint Paul" title="Logo Saint Paul">
+                    <div class="ParcLeft"> <a href="https://iut-lannion.univ-rennes.fr/" >
+                        <img src="img/Logo-IUT.png" alt="Logo IUT" title="Logo IUT"> </a>
                         <div>
-                            <strong> <a class="Date" > 2024 </a> </strong>
-                            <strong> <a class="GridTitle" data-i18n="BAC"> Baccalauréat général </a>  </strong>
+                            <strong> <a class="Date" > 2024/2025 </a> </strong>
+                            <strong> <a class="GridTitle" data-i18n="IUT" > 1ére année de BUT Informatique </a>  </strong>
                         </div>
-                        <a data-i18n="BACCont" > Obtention du baccalauréat général spécialité Mathématique et NSI (Numérique et Science de l'informatique) au lycée Saint-Paul à Vannes (56).</a>
-                    </div>
+                        <a data-i18n="IUTCont" > Je suis en cours d'apprentissage à l'IUT de Lannion (22).</a>
+                    </div>       
 
                     <div class="ParcRight">
                         <img src="img/logo-Moulin-Vert.png" alt="Logo Moulin Vert" title="Logo Moulin Vert">
@@ -184,14 +194,16 @@
                         <a data-i18n="MoulinCont" > J'ai été chargé d'encadrement d'une équipe d'ouvrier en situation de handicap chez Hovia à Arzon où j'ai encadré et participé aux taches d'entretient de logements hôteliers, à l'accueil des clients, à la gestion des factures ainssi qu'au service en salles. Cette expérience m'a permis de développer mes compétences en travail d'équipe, améliorer ma communication et fut une agréable éxperience sociale.</a>
                     </div>
 
-                    <div class="ParcLeft"> <a href="https://iut-lannion.univ-rennes.fr/" >
-                        <img src="img/Logo-IUT.png" alt="Logo IUT" title="Logo IUT"> </a>
+                     <div class="ParcLeft">
+                        <img src="img/logo-st-paul-st-georges.svg" alt="Logo Saint Paul" title="Logo Saint Paul">
                         <div>
-                            <strong> <a class="Date" > 2024/2025 </a> </strong>
-                            <strong> <a class="GridTitle" data-i18n="IUT" > 1ére année de BUT Informatique </a>  </strong>
+                            <strong> <a class="Date" > 2024 </a> </strong>
+                            <strong> <a class="GridTitle" data-i18n="BAC"> Baccalauréat général </a>  </strong>
                         </div>
-                        <a data-i18n="IUTCont" > Je suis en cours d'apprentissage à l'IUT de Lannion (22).</a>
-                    </div>  
+                        <a data-i18n="BACCont" > Obtention du baccalauréat général spécialité Mathématique et NSI (Numérique et Science de l'informatique) au lycée Saint-Paul à Vannes (56).</a>
+                    </div>
+
+                    
 
             </section>
 
@@ -441,7 +453,7 @@
                 <li>  <strong>Mail : <a href="mailto:tlouisre56730@gmail.com">tlouisre56730@gmail.com</a> </strong> </li>
                 <li>  <strong data-i18n="tel" >Téléphone : <a>07 54 36 45 62</a></strong></li>
                 <li>  <a href="https://www.linkedin.com/in/titouan-louis-renault-623956356/" target="_blank" title="Visiter le site">  <img src="img/linkedin.png" alt="Bouton image" class="image-button">  </a>  </li>
-                <li>  <a href="https://github.com/Magick0/Portfolio" target="_blank" title="Visiter le site">  <img src="img/github.png" alt="Bouton image" class="image-button">  </a>  </li>
+                <li>  <a href="https://github.com/Magick0/Portfolio" target="_blank" title="Visiter le site">  <img src="img/github.png" alt="Bouton image" class="image-button-github">  </a>  </li>
 
 
 
