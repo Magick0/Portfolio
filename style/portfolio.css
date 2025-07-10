@@ -899,6 +899,10 @@ ul li {
     padding: 20px;
   }
 
+  .Contact {
+    padding: 20px 10px;
+  }
+
   .Contact .contact-list {
     gap: 20px;
   }
