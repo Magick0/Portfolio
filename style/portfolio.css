@@ -737,7 +737,7 @@ ul li {
   gap: 8px;
 }
 
-.Contact .contact-list a {
+.Contact .contact-list a:not(.entTel) {
   color: #23741c;
   text-decoration: none;
 }
