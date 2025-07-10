@@ -9,7 +9,7 @@ fr: {
     aboutme: "Étudiant en informatique spécialisé en développement logiciel <br> à la recherche d'une alternance de 12 mois",
     telechargementCV: "Télécharger mon CV",
     aboutmeTitle: "À propos de moi",
-    aboutmeText: "Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D, la physique et la musique.",
+    aboutmeText: "Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D et la musique.",
     
     
     devWeb: "Développement web",
