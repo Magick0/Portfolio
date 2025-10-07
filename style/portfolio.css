@@ -699,7 +699,7 @@ ul li {
   color: #ecf0f1;
 }
 
-@media (max-width: 0px) {
+@media (max-width: 768px) {
   .modal-content {
     width: 90%;
     padding: 20px;
@@ -779,7 +779,7 @@ ul li {
 
 
 
-@media screen and (max-width: 0px) {
+@media screen and (max-width: 1250px) {
 
   .FR {
     position: fixed;
@@ -921,35 +921,3 @@ ul li {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
