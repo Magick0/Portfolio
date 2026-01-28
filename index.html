@@ -13,5 +13,456 @@
 
     <body>
         
+<<<<<<< HEAD
+=======
+        <header>
+            <nav class="menuH">
+                <div class="menuH-items">
+                    <a onclick="topFunction()" >PRESENTATION</a>
+                    <a href="#COMPETENCES" data-i18n="competences"  >COMPETENCES</a>
+                    <a href="#PARCOURS" data-i18n="diplomes"        >PARCOURS</a>
+                    <a href="#PROJETS" data-i18n="projets"          >PROJETS</a>
+                    <a href="#CONTACTS"                             >CONTACTS</a>
+                    <div class="toggle-button-cover">
+                        <div class="button-cover">
+                            <div class="button r" id="button-3">
+                                <input type="checkbox" class="checkbox" />
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                </div>
+                <div id="mobile-menu" class="mobile-menu">
+                    <a href="#PRESENTATION" class="firstCase"       >PRESENTATION</a>
+                    <a href="#COMPETENCES"  data-i18n="competences" >COMPETENCES</a>
+                    <a href="#PARCOURS"     data-i18n="diplomes"    >PARCOURS</a>
+                    <a href="#PROJETS"      data-i18n="projets"     >PROJETS</a>
+                    <a href="#CONTACTS"                             >CONTACTS</a>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+            <section id="PRESENTATION" class="AboutMe">
+
+                <div>
+                    <h1>Titouan <br>Louis Renault </h1>
+                    <h2 data-i18n="aboutme" >Étudiant en informatique spécialisé en développement logiciel<br> à la recherche d'une alternance de 12 mois </h2>
+                    <a  data-i18n="telechargementCV" href="src/LOUIS--RENAULT_Titouan_CV.pdf" download class="btn-cv">Télécharger mon CV</a>
+                </div>
+                <img src="img/photoProfil.webp" alt="" title="">
+
+            </section>
+
+
+            <div class="separator"></div>
+
+            
+
+
+            <section class="Presentation" >
+
+                <div class="container">
+                    <h2 data-i18n="aboutmeTitle" >À propos de moi</h2>
+                    <p data-i18n="aboutmeText">
+                    Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D et la musique.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <div class="separator"></div>
+
+
+            <section class="Competences" id="COMPETENCES">
+
+                    <div>
+                        <img src="img/linternet.png" alt="Développement web" title="Développement web">
+                        <strong> <a class="GridTitle" data-i18n="devWeb" > Développement web </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devWebCont" > Je possède une base de connaissances en développement Web et je sais utiliser plusieurs langages de programmation tels que HTML et CSS ainsi que la framework Bootstrap.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/codage.png" alt="Développement Logiciel" title="Développement Logiciel">
+                        <strong> <a class="GridTitle" data-i18n="devLog" > Développement Logiciel  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devLogCont" > Je suis capable de développer des logiciels en utilisant des langages tels que Java17, Python, C, javaFx ainsi que l'utilisation de Javafx Scene Builder.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/base-de-donnees.png" alt="Base de données" title="Base de données">
+                        <strong> <a class="GridTitle" data-i18n="bdd" >  Base de données  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="bddCont" > Je possède une base de connaissances en base de données, je sais utiliser plusieurs logiciels tels que MySQL et Oracle. Je sais donc créer des schémas de base de données et les peupler.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/dossier.png" alt="Système" title="Système">
+                        <strong> <a class="GridTitle" data-i18n="systeme" >  Système  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="systemeCont" > Je possède une base de connaissances en maintenance Système et je sais utiliser plusieurs langages tels que PHP et Bash.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/service-reseau.png" alt="Service Réseau" title="Service Réseau">
+                        <strong> <a class="GridTitle" data-i18n="reseau" >  Service Réseau </a> </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="reseauCont" > Je possède une base de connaissances en maintenance et en instalation de réseaux et je sais utiliser le logiciel Sisco Packet Tracer.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/brain-process.png" alt="" title="">
+                        <strong> <a class="GridTitle" data-i18n="compAlgo" > Comparaison Alghorithmique  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="compAlgoCont" > Je suis capable d'avoir une approche alghorithmique pour tout type de problèmes.</a>
+                    </div>
+
+            </section>
+
+            <!-- <section class="Competences" id="COMPETENCES">
+
+                    <div>
+                        <img src="img/snake.svg" alt="Développement web" title="Développement web">
+                        <strong> <a class="GridTitle" data-i18n="devWeb" > Implémentation d'un besoin client </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devWebCont" > Je peux développer des applications informatiques simples tels qu'un jeu de snake.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/algorithme.png" alt="Développement Logiciel" title="Développement Logiciel">
+                        <strong> <a class="GridTitle" data-i18n="devLog" > Comparaison d'algorithmes  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="devLogCont" > Je suis capable d'appréhender et de construire des algorithmes.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/computer.png" alt="Base de données" title="Base de données">
+                        <strong> <a class="GridTitle" data-i18n="bdd" >  Installation de poste  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="bddCont" > Je possède une base de connaissances pour installer et configurer un poste de travail.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/base-de-donnees.png" alt="Système" title="Système">
+                        <strong> <a class="GridTitle" data-i18n="systeme" >  Création de bases de données  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="systemeCont" > Je suis capable de concevoir et mettre en place une base de données à partir d'un cahier des charges client.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/service-reseau.png" alt="Service Réseau" title="Service Réseau">
+                        <strong> <a class="GridTitle" data-i18n="reseau" >  Recueil de besoins </a> </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="reseauCont" > Je possède une base de connaissances pour identifier les besoins métiers des clients et des utilisateurs.</a>
+                    </div>
+
+                    <div>
+                        <img src="img/euro.png" alt="" title="">
+                        <strong> <a class="GridTitle" data-i18n="compAlgo" > Environnement économique  </a>  </strong>
+                        <div class="separator"></div>
+                        <a data-i18n="compAlgoCont" > Je peux identifier mes aptitudes pour travailler dans une équipe.</a>
+                    </div>
+
+            </section> -->
+
+
+            <div class="separator"></div>
+
+
+            <section class="Parcours" id="PARCOURS">
+
+                    <div class="ParcLeft"> <a href="https://iut-lannion.univ-rennes.fr/" >
+                        <img src="img/Logo-IUT.png" alt="Logo IUT" title="Logo IUT"> </a>
+                        <div>
+                            <strong> <a class="Date" > 2024/2025 </a> </strong>
+                            <strong> <a class="GridTitle" data-i18n="IUT" > 1ére année de BUT Informatique </a>  </strong>
+                        </div>
+                        <a data-i18n="IUTCont" > Je suis en cours d'apprentissage à l'IUT de Lannion (22).</a>
+                    </div>       
+
+                    <div class="ParcRight">
+                        <img src="img/logo-Moulin-Vert.png" alt="Logo Moulin Vert" title="Logo Moulin Vert">
+                        <div>
+                            <strong> <a class="Date" data-i18n="ete2024"> Été 2024 </a> </strong>
+                            <strong> <a class="GridTitle" data-i18n="Moulin" > Chargé d'encadrement | Réceptioniste </a>  </strong>
+                        </div>
+                        <a data-i18n="MoulinCont" > J'ai été chargé d'encadrement d'une équipe d'ouvrier en situation de handicap chez Hovia à Arzon où j'ai encadré et participé aux taches d'entretient de logements hôteliers, à l'accueil des clients, à la gestion des factures ainssi qu'au service en salles. Cette expérience m'a permis de développer mes compétences en travail d'équipe, améliorer ma communication et fut une agréable éxperience sociale.</a>
+                    </div>
+
+                     <div class="ParcLeft">
+                        <img src="img/logo-st-paul-st-georges.svg" alt="Logo Saint Paul" title="Logo Saint Paul">
+                        <div>
+                            <strong> <a class="Date" > 2024 </a> </strong>
+                            <strong> <a class="GridTitle" data-i18n="BAC"> Baccalauréat général </a>  </strong>
+                        </div>
+                        <a data-i18n="BACCont" > Obtention du baccalauréat général spécialité Mathématique et NSI (Numérique et Science de l'informatique) au lycée Saint-Paul à Vannes (56).</a>
+                    </div>
+
+                    
+
+            </section>
+
+
+            <div class="separator"></div>
+
+
+            <h1 class="ProjTiltle" data-i18n="TitreProjets"> Mes Projets </h1>
+
+
+            <section class="Projets" id="PROJETS">
+
+                    <div>
+                        <img src="img/snake.svg" alt="Snake" title="Snake">
+                        <strong> <a class="GridTitle" data-i18n="Snake" > Jeu du Snake </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoin"> Implémentation d'un besoin </a> </li>
+                            <li> <a> Conception </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Tests </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal1')" > Plus </a>
+                        
+                    </div>
+
+                    <div>
+                        <img src="img/computer.png" alt="PHP" title="PHP">
+                        <strong> <a class="GridTitle" data-i18n="InstPoste" > Instalation d'un poste </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoin"> Implémentation d'un besoin </a> </li>
+                            <li> <a> Conception </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Instalation </a> </li>
+                            <li> <a> Configuration </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal2')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/base-de-donnees.png" alt="BDD" title="BDD">
+                        <strong> <a class="GridTitle" data-i18n="CreatBDD" > Création d'une base de données </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoinCli"> Implémentation d'un besoin client </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Tests </a> </li>
+                            
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal3')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/Logo_JO_dete_-_Paris_2024.svg_.webp" alt="JO 2024" title="JO 2024">
+                        <strong> <a class="GridTitle" data-i18n="JO2024" > Création d'un site web </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoinCli"> Implémentation d'un besoin client </a> </li>
+                            <li> <a data-i18n="AptTE"> Aptitudes travail d'équipe </a> </li>
+                            <li> <a> Conception </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal4')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/EllaDance.png" alt="App" title="App">
+                        <strong> <a class="GridTitle" data-i18n="devApp" > Développement d'une<br>app </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoinCli"> Implémentation d'un besoin client </a> </li>
+                            <li> <a data-i18n="AptTE"> Aptitudes travail d'équipe </a> </li>
+                            <li> <a> Conception </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Tests </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal5')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/service-reseau.png" alt="Service Réseau" title="Service Réseau">
+                        <strong> <a class="GridTitle" data-i18n="ServRes" > Instalation de services réseau </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoin"> Implémentation d'un besoin </a> </li>
+                            <li> <a data-i18n="AptTE"> Aptitudes travail d'équipe </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Tests </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal6')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/base-de-donnees.png" alt="ExpBDD" title="ExpBDD">
+                        <strong> <a class="GridTitle" data-i18n="ExpBDD" > Exploitation d'une base de donnée </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="ImpBesoin"> Implémentation d'un besoin </a> </li>
+                            <li> <a data-i18n="Dév"> Développement </a> </li>
+                            <li> <a> Tests </a> </li>
+                        </ul>
+                        <a class="btnVoirPLus" onclick="openModal('modal7')" > Plus </a>
+
+                    </div>
+
+                    <div>
+                        <img src="img/gestion-de-projet.png" alt="GProj" title="GProj">
+                        <strong> <a class="GridTitle" data-i18n="GProj" > Gestion d'un projet </a>  </strong>
+                        <ul>
+                            <li> <a data-i18n="AptTE"> Aptitudes travail d'équipe </a> </li>
+                            <li> <a> Conception </a> </li>
+                        </ul>
+                        
+                        <a class="btnVoirPLus" onclick="openModal('modal8')" > Plus </a>
+
+                    </div>
+    
+            </section>
+
+            <!-- Modals -->
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <button class="close" onclick="closeModal('modal1')">&times;</button>
+                    <h2 data-i18n="Snake">  Jeu du Snake</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="SnakeObjCont">Conceptualiser et développer un jeu de snake en langage C a partir d'un cahier des charges. Remplire des batteries de tests. </p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="SnakeDéroul" class="etapes" >étape 1 : maquette <br> étape 2 : cahier de tests <br> étape 3 : algorithme et décomposition <br> étape 4 : code source <br> étape 5 : traces d'exécution</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2 data-i18n="InstPosDev">Instalation d'un poste de développement</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="InstPosDevObj">Exploitation de conteneurs Docker 'utilitaires' et création d'un Workflow chaînant ces conteneurs. L'objectif était la mise en place de briques logicielles s'intégrant à un environnement de développement complexe. Ces briques logicielles conteneurisées formaient un mécanisme quasi-automatique redéployable, à peu de frais (temps et compétences), ultérieurement et/ou par d'autres développeurs.
+                    Le projet permettait de générer des PDF de rapports commerciaux régionaux d'une entreprise.</p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="InstPosDevDéroul" class="etapes" >
+                            Installation d'un poste pour le développement : mise en œuvre d'une chaîne de processus (workflow) s'intégrant dans un environnement de développement.<br>
+                            étape 1 : Identifier les outils nécessaires<br>
+                            étape 2 : Préparation des fichiers de test (donnés et configs)<br>
+                            étape 3 : Proposition d'un workflow enchaînant les outils<br>
+                            étape 4 : Production finale et ""scriptage"" du workflow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2 data-i18n="CreatBDDFoot">Création d'une base de donnée de Football</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="CreatBDDFootObj">Création d'une base de donnée simulant le fonctionnement de ligues et de saisons du Football. </p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="CreatBDDFootDéroul" class="etapes" >
+                            étape 1 : critique de la base de données existante + proposition d'un nouveau modèle (incluant les correstions) et sa transformation en modèle relationnel (script SQL)<br>
+                            étape 2 : répondre aux différentes requêtes (livrable sous forme de script SQL)<br>
+                            étape 3 : extension de la base de données (diagramme de classe + implémentation SQL) + proposition d'un jeu de données test pour peupler la nouvelle base de données</p><br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <h2 data-i18n="CreatWEB">Création d'un site web pour les J-O 2024</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="CreatWEBObj">Création d'un site web pour les J-O 2024 sur un sport en particulier. Maquettage et développement HTML, CSS et JavaScript.</p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="CreatWEBDéroul" class="etapes" >
+                            étape 1 : Organisation d'équipe : répartition du travail, rôles....<br>
+                            étape 1 : Compréhension et rédaction des besoins<br>
+                            étape 1 : Réalisation de l'arborescence<br>
+                            étape 1 : Création de la charte graphique<br>
+                            étape 1 : Maquettage<br>
+                            étape 1 : Programmation avec outil de versionning<br>
+                            étape 1 : Présentation orale en équipe</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                    <h2 data-i18n="DévAPP">Développement d'une application de gestion d'une association de dance</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="DévAPPObj"> Conception, gestion et développement d'un logiciel de gestion d'une association de dance. </p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="DévAPPDéroul" class="etapes">étape 1 : Rédaction SEL <br>étape 2 : Organigrame tâches <br> étape 3 : Matrice RACI <br> étape 4 : Estimation des charges <br> étape 5 : Maquettage <br> étape 6 : Développement</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <h2 data-i18n="InstServRes">Instalation de services réseau</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="InstServResObj">Création et configuration d'un environnement appache pour mettre en oeuvre un site et l'automatiser.</p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="InstServResDéroul" class="etapes" >étape 1 : création serveur <br> étape 2 : configuration apache <br> étape 3 : création de scripts d'automatisation </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal7" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <h2 data-i18n="ExplBDD">Exploitation d'une base de donnée</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="ExplBDDObj">Implémentation et peuplement d'un shéma relationel. Exploitation et analyse des données. </p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="ExplBDDDéroul" class="etapes" >étape 1 : Traduction/implantation d'un schéma relationnel <br> étape 2 : Peuplement de la base de données <br> étape 3 : Exploitation de la base de données<br> étape 4 : Analyse statistique des données </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal8" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal8')">&times;</span>
+                    <h2 data-i18n="GestProj">Gestion d'un projet et mise en oeuvre d'un team building</h2>
+                    <div class="contenuModal">
+                        <h3 data-i18n="Obj"> Objectifs </h3>
+                        <p data-i18n="GestProjObj">Tournage et montage d'une vidéo de promotion d'un team building sur l'Ile de Bréhat.</p>
+                        <h3 data-i18n="Déroul"> Déroulement </h3>
+                        <p data-i18n="GestProjDéroul" class="etapes" >étape 1 : Rédaction d'un rapport d'organisation <br> étape 2 : Création d'une infographie <br> étape 3 : Tournage d'une vidéo de promotion <br> étape 4 : Montage d'une vidéo de promotion</p>
+                    </div>
+                </div>
+            </div>
+                        
+    </main>
+
+    <footer id="CONTACTS" class="Contact">
+        <section>
+            <div>
+                <ul class="contact-list">
+                <li>  <strong>Mail : <a href="mailto:tlouisre56730@gmail.com">tlouisre56730@gmail.com</a> </strong> </li>
+                <li>  <strong> <a class='entTel' data-i18n="tel" >Téléphone : <a> 07 54 36 45 62</a></strong></li>
+                <li>  <a href="https://www.linkedin.com/in/titouan-louis-renault-623956356/" target="_blank" title="Visiter le site">  <img src="img/linkedin.png" alt="Bouton image" class="image-button">  </a>  </li>
+                <li>  <a href="https://github.com/Magick0/Portfolio" target="_blank" title="Visiter le site">  <img src="img/github.png" alt="Bouton image" class="image-button-github">  </a>  </li>
+
+
+
+                </ul>
+            </div>
+            <p class="copyright" data-i18n="copyright">© 2025 Titouan Louis Renault — Tous droits réservés</p>
+        </section>
+    </footer>
+
+>>>>>>> 066e8bba752833b1a4293e44fb392eb03b38c185
     </body>
 </html>

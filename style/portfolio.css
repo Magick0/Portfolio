@@ -445,7 +445,7 @@ div .separator {
 .Competences div:not(.separator) {
     border: solid #aaaaaa;
     width: 300px;
-    height: 420px;
+    height: 440px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -737,7 +737,7 @@ ul li {
   gap: 8px;
 }
 
-.Contact .contact-list a {
+.Contact .contact-list a:not(.entTel) {
   color: #23741c;
   text-decoration: none;
 }
@@ -899,6 +899,10 @@ ul li {
     padding: 20px;
   }
 
+  .Contact {
+    padding: 20px 10px;
+  }
+
   .Contact .contact-list {
     gap: 20px;
   }
@@ -917,35 +921,3 @@ ul li {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

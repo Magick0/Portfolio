@@ -9,7 +9,7 @@ fr: {
     aboutme: "Étudiant en informatique spécialisé en développement logiciel <br> à la recherche d'une alternance de 12 mois",
     telechargementCV: "Télécharger mon CV",
     aboutmeTitle: "À propos de moi",
-    aboutmeText: "Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D, la physique et la musique.",
+    aboutmeText: "Je m'appelle Titouan, j'ai 18 ans et actuellement ​étudiant en 1ère année d'informatique a l'IUT de Lannion. Je m'intéresse a un peu tout mais j'aime par dessus tout le développement logiciel. Je suis passionné par l'astronomie, les jeux vidéos, l'escalade et la physique. Mais j'apprécie également la psychologie, la 3D et la musique.",
     
     
     devWeb: "Développement web",
@@ -115,7 +115,7 @@ fr: {
     GestProjObj : "Tournage et montage d'une vidéo de promotion d'un team building sur l'Ile de Bréhat.",
     GestProjDéroul : "étape 1 : Rédaction d'un rapport d'organisation <br> étape 2 : Création d'une infographie <br> étape 3 : Tournage d'une vidéo de promotion <br> étape 4 : Montage d'une vidéo de promotion",
     
-    tel: "Téléphone :",
+    tel: "Téléphone : ",
     copyright: "© 2025 Titouan Louis Renault — Tous droits réservés",
 
 
@@ -231,7 +231,7 @@ en: {
     GestProjDéroul: "step 1: Write an organizational report <br> step 2: Create an infographic <br> step 3: Shoot a promotional video <br> step 4: Edit the promotional video",
 
 
-    tel: "Phone :",
+    tel: "Phone : ",
     copyright: "© 2025 Titouan Louis Renault — All rights reserved",
 }
 };
