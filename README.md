@@ -1,6 +1,6 @@
 👋 Hi, I’m Titouan Louis--Renault
 
-👀 I’m interested in physics and partially in development
+👀 I’m interested in development and partially in physics and art
 
 🌱 Actively learning Php, Java and C, and improving on HTML/CSS, PHP and English
 
