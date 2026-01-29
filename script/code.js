@@ -238,10 +238,10 @@ en: {
 
 
 function setLanguage(lang) {
-document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
+document.querySelectorAll("[data-trad]").forEach((el) => {
+    const key = el.getAttribute("data-trad");
     if (translations[lang] && translations[lang][key]) {
-    el.innerHTML = translations[lang][key];
+      el.innerHTML = translations[lang][key];
     }
 });
 }
@@ -291,3 +291,26 @@ $(document).ready(function() {
 });
 
 
+const burgerBtn = document.getElementById('burgerBtn');
+const burgerCont = document.getElementById('burgerCont');
+
+function toggleMenu() {
+  const isOpen = burgerBtn.classList.toggle('open');
+
+  if (isOpen) {
+    burgerCont.classList.add("open");
+  } else {
+    burgerCont.classList.remove("open");
+  }
+}
+
+burgerBtn.addEventListener('click', toggleMenu);
+
+burgerCont.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A' && window.innerWidth < 768) {
+    burgerBtn.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    burgerCont.setAttribute('hidden', '');
+    burgerBtn.setAttribute('aria-label', 'Ouvrir le menu');
+  }
+});
