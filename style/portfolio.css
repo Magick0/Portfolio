@@ -3,7 +3,7 @@ figure, h1, img, figcaption, a {
     user-select: none;
 }
  
-body:not(.Nom) {
+body {
     margin: -0;
     font-family:"Bai Jamjuree", sans-serif;       /*'Sofia-Pro'*/
     color: #0d0d0d;
@@ -13,6 +13,7 @@ body:not(.Nom) {
     flex: 1;
     text-align: center;  
     font-size: 1.3rem;
+        background: #00000012;
 
 }
 
