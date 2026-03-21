@@ -40,14 +40,14 @@ html body header nav {
   left: 0;
   z-index: 1000;
 }
-html body header nav > div:first-of-type {
+html body header nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
 }
-html body header nav > div:first-of-type > a {
+html body header nav > div > a {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
@@ -55,23 +55,21 @@ html body header nav > div:first-of-type > a {
   text-align: center;
   transition: color 0.4s;
 }
-html body header nav > div:first-of-type > div:first-of-type {
+html body header nav > div > div {
   display: table-cell;
   position: relative;
   width: 200px;
   height: 140px;
   box-sizing: border-box;
 }
-html body header nav > div:first-of-type > div:first-of-type > div {
+html body header nav > div > div > div {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 100px;
-  margin: 20px;
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div {
+html body header nav > div > div > div > div {
   position: relative;
   top: 50%;
   width: 74px;
@@ -80,7 +78,7 @@ html body header nav > div:first-of-type > div:first-of-type > div > div {
   overflow: hidden;
   border-radius: 100px;
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div > input {
+html body header nav > div > div > div > div > input {
   position: relative;
   width: 100%;
   height: 100%;
@@ -90,17 +88,30 @@ html body header nav > div:first-of-type > div:first-of-type > div > div > input
   cursor: pointer;
   z-index: 3;
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div > div {
+html body header nav > div > div > div > div > input:active + #knobs:before {
+  width: 46px;
+  border-radius: 100px;
+}
+html body header nav > div > div > div > div > input:checked + #knobs:before {
+  content: "";
+  left: 42px;
+  background: linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%), linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%), linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%), linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%), linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%), linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
+  background-color: #012169;
+}
+html body header nav > div > div > div > div > input:checked + #knobs:before:active + #knobs:before {
+  margin-left: -26px;
+}
+html body header nav > div > div > div > div > div {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div > div:first-of-type {
+html body header nav > div > div > div > div > div:first-of-type {
   z-index: 2;
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div > div:first-of-type ::before {
+html body header nav > div > div > div > div > div:first-of-type::before {
   content: "";
   position: absolute;
   top: 4px;
@@ -118,29 +129,12 @@ html body header nav > div:first-of-type > div:first-of-type > div > div > div:f
   border-radius: 50%;
   transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
-html body header nav > div:first-of-type > div:first-of-type > div > div > div:last-of-type {
+html body header nav > div > div > div > div > div:last-of-type {
   border-radius: 100px;
   width: 100%;
   background-color: #a8aca7;
   transition: 0.3s ease all;
   z-index: 1;
-}
-html body header nav > div:first-of-type > div:last-of-type {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  padding: 0 1em;
-}
-html body header nav > div:last-of-type {
-  display: none;
-  position: fixed;
-  right: 10px;
-  top: 70px;
-  flex-direction: column;
-  background-color: #000;
-  text-align: center;
-  border-radius: 13px;
 }
 html body footer {
   padding: 40px 20px;
@@ -240,32 +234,8 @@ header {
   left: 0;
 }
 
-.button {
-  position: relative;
-  top: 50%;
-  width: 74px;
-  height: 36px;
-  margin: -20px auto 0 auto;
-  overflow: hidden;
-}
-
-.button.r, .button.r .layer {
-  border-radius: 100px;
-}
-
 .button.b2 {
   border-radius: 2px;
-}
-
-.checkbox {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
 }
 
 .knobs {

@@ -6,178 +6,176 @@
 
 
 html {
-    --s: 120px; /* control the size */
-    background:conic-gradient(from 150deg at 50% 33%,#0000,#c7c7c7 .5deg 60deg,#0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4), conic-gradient(from -30deg at 50% 66%,#3b3b3b00,#b3bdb0 .5deg 60deg,#dbdbdb 60.5deg);
-    background-size: var(--s) calc(var(--s)/1.154);
-    scroll-behavior: smooth;
+  --s: 120px; /* control the size */
+  background:conic-gradient(from 150deg at 50% 33%,#0000,#c7c7c7 .5deg 60deg,#0000 60.5deg) calc(var(--s)/2) calc(var(--s)/1.4), conic-gradient(from -30deg at 50% 66%,#3b3b3b00,#b3bdb0 .5deg 60deg,#dbdbdb 60.5deg);
+  background-size: var(--s) calc(var(--s)/1.154);
+  scroll-behavior: smooth;
 
-    body {
-        margin: -0;
-        font-family:"Bai Jamjuree", sans-serif;  
-        color: #0d0d0d;
-        overflow-x: hidden;
-        text-decoration: none;
-        flex: 1;
-        text-align: center;  
-        font-size: 1.3rem;
-        background: #00000012;
+  body {
+    margin: -0;
+    font-family:"Bai Jamjuree", sans-serif;  
+    color: #0d0d0d;
+    overflow-x: hidden;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;  
+    font-size: 1.3rem;
+    background: #00000012;
 
-        figure, h1, img, figcaption, a {
-            user-select: none;
-        }
+    figure, h1, img, figcaption, a {
+        user-select: none;
+    }
 
-        header{
-            height: 96px;
+    header{
+      height: 96px;
 
-            nav{
-                font-family: 'Sofia-Pro';
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $noir;
-                font-weight: bold;
-                height: 5em;
-                position: fixed;
-                width: 100%;
-                top: 0;
-                left: 0;
-                z-index: 1000;
+      nav{
+        font-family: 'Sofia-Pro';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $noir;
+        font-weight: bold;
+        height: 5em;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+
+        >div{ // nom categories
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          max-width: 1200px;
+
+          >a{
+              text-decoration: none;
+              color: $blanc;
+              font-size: 1.3rem;
+              flex: 1;
+              text-align: center;
+              transition: color 0.4s;
+          }
+
+          >div{
+            display: table-cell;
+            position: relative;
+            width: 200px;
+            height: 140px;
+            box-sizing: border-box;
+                    
+            >div{
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              // height: 100px;
+              // margin: 20px;
+
+              >div{
+                position: relative;
+                top: 50%;
+                width: 74px;
+                height: 36px;
+                margin: -20px auto 0 auto;
+                overflow: hidden;
+                border-radius: 100px;
+
+                >input{
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  padding: 0;
+                  margin: 0;
+                  opacity: 0;
+                  cursor: pointer;
+                  z-index: 3;
+
+                  &:active + #knobs:before{
+                    width: 46px;
+                    border-radius: 100px;
+                  }
+
+                  &:checked + #knobs:before{
+                    content: "";
+                    left: 42px;
+                    background: 
+                        linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%),
+                        linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%),
+                        linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%),
+                        linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%),
+                        linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+                        linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
+                        linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%),
+                        linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
+                    background-color: #012169;
+                  
+                    &:active + #knobs:before{
+                      margin-left: -26px;
+                    }
+                  }
+                }
 
                 >div{
-                    &:first-of-type{ // nom categories
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 100%;
-                        max-width: 1200px;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
 
-                        >a{
-                            text-decoration: none;
-                            color: $blanc;
-                            font-size: 1.3rem;
-                            flex: 1;
-                            text-align: center;
-                            transition: color 0.4s;
-                        }
+                  &:first-of-type{
+                    z-index: 2;
 
-                        >div{
-                            &:first-of-type{
-                                display: table-cell;
-                                position: relative;
-                                width: 200px;
-                                height: 140px;
-                                box-sizing: border-box;
-                                
-                                >div{
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    bottom: 0;
-                                    left: 0;
-                                    height: 100px;
-                                    margin: 20px;
-
-                                    >div{
-                                        position: relative;
-                                        top: 50%;
-                                        width: 74px;
-                                        height: 36px;
-                                        margin: -20px auto 0 auto;
-                                        overflow: hidden;
-                                        border-radius: 100px;
-
-                                        >input{
-                                            position: relative;
-                                            width: 100%;
-                                            height: 100%;
-                                            padding: 0;
-                                            margin: 0;
-                                            opacity: 0;
-                                            cursor: pointer;
-                                            z-index: 3;
-                                        }
-
-                                        >div{
-                                            position: absolute;
-                                            top: 0;
-                                            right: 0;
-                                            bottom: 0;
-                                            left: 0;
-
-                                            &:first-of-type{
-                                                z-index: 2;
-
-                                                ::before{
-                                                    content: "";
-                                                    position: absolute;
-                                                    top: 4px;
-                                                    left: 4px;
-                                                    width: 20px;
-                                                    height: 10px;
-                                                    color: #fff;
-                                                    font-size: 10px;
-                                                    font-weight: bold;
-                                                    text-align: center;
-                                                    line-height: 1;
-                                                    padding: 9px 4px;
-                                                    background: #1400a8;
-                                                    background: linear-gradient(90deg, rgba(20, 0, 168, 1) 33%, rgba(255, 255, 255, 1) 33%, rgba(255, 255, 255, 1) 66%, rgba(255, 0, 0, 1) 66%);
-                                                    border-radius: 50%;
-                                                    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
-                                                }
-                                            }               
-
-                                            &:last-of-type{
-                                                border-radius: 100px;
-                                                width: 100%;
-                                                background-color: #a8aca7;
-                                                transition: 0.3s ease all;
-                                                z-index: 1;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            &:last-of-type{
-                                display: none;
-                                font-size: 2rem;
-                                color: $blanc;
-                                cursor: pointer;
-                                padding: 0 1em;
-                            }
-                        }
+                    &::before{
+                      content: "";
+                      position: absolute;
+                      top: 4px;
+                      left: 4px;
+                      width: 20px;
+                      height: 10px;
+                      color: #fff;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: center;
+                      line-height: 1;
+                      padding: 9px 4px;
+                      background: #1400a8;
+                      background: linear-gradient(90deg, rgba(20, 0, 168, 1) 33%, rgba(255, 255, 255, 1) 33%, rgba(255, 255, 255, 1) 66%, rgba(255, 0, 0, 1) 66%);
+                      border-radius: 50%;
+                      transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
                     }
+                  }               
 
-                    &:last-of-type{
-                        display: none;
-                        position: fixed;
-                        right: 10px;
-                        top: 70px;
-                        flex-direction: column;
-                        background-color: #000;
-                        text-align: center;
-                        border-radius: 13px;
-                    }
+                  &:last-of-type{
+                      border-radius: 100px;
+                      width: 100%;
+                      background-color: #a8aca7;
+                      transition: 0.3s ease all;
+                      z-index: 1;
+                  }
                 }
+              }
             }
+          }
         }
-
-        main{
-
-
-        }
-
-        footer{
-            padding: 40px 20px;
-            border-top: 2px solid $grisBorder;
-            text-align: center;
-            min-height: 70px;
-            background-color: $noir;
-        }
-
-        
+      }
     }
+
+    main{
+
+    }
+
+    footer{
+      padding: 40px 20px;
+      border-top: 2px solid $grisBorder;
+      text-align: center;
+      min-height: 70px;
+      background-color: $noir;
+    }
+  }
 }
 
 
@@ -276,32 +274,8 @@ header {
     left: 0;
 }
 
-.button {
-    position: relative;
-    top: 50%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
-}
-
-.button.r, .button.r .layer {
-    border-radius: 100px;
-}
-
 .button.b2 {
     border-radius: 2px;
-}
-
-.checkbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
 }
 
 .knobs {
