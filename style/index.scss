@@ -1,5 +1,5 @@
 @use "variables" as *;
-@use "mixin.scss" as *;
+@use "mixines.scss" as *;
 
 
 
@@ -135,8 +135,6 @@ html {
                                                 z-index: 1;
                                             }
                                         }
-
-
                                     }
                                 }
                             }
