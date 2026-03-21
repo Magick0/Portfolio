@@ -232,7 +232,7 @@ document.querySelectorAll("[data-trad]").forEach((el) => {
 }
 
 $(document).ready(function() {
-    $(".checkbox").change(function() {
+    $(".translate").change(function() {
         if ($(this).is(":checked")) {
             setLanguage('en');
         } else {
