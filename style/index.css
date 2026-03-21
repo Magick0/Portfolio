@@ -1,8 +1,17 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Poppins&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 html {
-  --s: 120px; /* control the size */
+  --s: 120px;
   background: conic-gradient(from 150deg at 50% 33%, rgba(0, 0, 0, 0), #c7c7c7 0.5deg 60deg, rgba(0, 0, 0, 0) 60.5deg) calc(var(--s) / 2) calc(var(--s) / 1.4), conic-gradient(from -30deg at 50% 66%, rgba(59, 59, 59, 0), #b3bdb0 0.5deg 60deg, #dbdbdb 60.5deg);
   background-size: var(--s) calc(var(--s) / 1.154);
   scroll-behavior: smooth;
@@ -22,6 +31,135 @@ html body figure, html body h1, html body img, html body figcaption, html body a
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+html body h1 {
+  font-size: 3em;
+  margin-left: 0.25em;
+  line-height: 90%;
+  text-shadow: 5px 5px 1px #77a16d;
+}
+html body h3 {
+  font-size: 1.5em;
+}
+html body ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+html body ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+html body .separator {
+  width: 80px;
+  height: 3px;
+  background-color: #5c5c5c;
+  margin: 10px auto;
+}
+html body .GridTitle {
+  color: #23741c;
+  font-size: 1.5rem;
+  margin: 0 0.25em;
+}
+html body .Date {
+  color: #444;
+  font-size: 1.7rem;
+  margin: 0 1em 0.5em 1em;
+  display: block;
+}
+html body .etapes {
+  text-align: left;
+}
+html body .btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(130deg, #000000, #23741c);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+html body .btn-cv:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
+}
+html body .btnVoirPLus {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-bottom: 1em;
+  background: linear-gradient(130deg, #000000, #23741c);
+  color: rgb(243, 243, 243);
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+html body .btnVoirPLus:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
+}
+html body .modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+  padding: 40px 0;
+}
+html body .modal .modal-content {
+  background: #202020;
+  color: #ecf0f1;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 800px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: fadeInModal 0.4s ease;
+  position: relative;
+  top: 10%;
+}
+html body .modal .modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #23741c;
+  padding-bottom: 10px;
+}
+html body .modal .modal-content .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: #e74c3c;
+  color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  padding: 6px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+html body .modal .modal-content .close:hover {
+  transform: scale(1.1);
+}
+html body .modal .modal-content .contenuModal h3 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #77a16d;
+}
+html body .modal .modal-content .contenuModal p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #ecf0f1;
 }
 html body header {
   height: 96px;
@@ -49,11 +187,14 @@ html body header nav > div {
 }
 html body header nav > div > a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 1.3rem;
   flex: 1;
   text-align: center;
   transition: color 0.4s;
+}
+html body header nav > div > a:hover {
+  color: #23741c;
 }
 html body header nav > div > div {
   display: table-cell;
@@ -88,18 +229,18 @@ html body header nav > div > div > div > div > input {
   cursor: pointer;
   z-index: 3;
 }
-html body header nav > div > div > div > div > input:active + #knobs:before {
+html body header nav > div > div > div > div > input:active + div:first-of-type::before {
   width: 46px;
   border-radius: 100px;
 }
-html body header nav > div > div > div > div > input:checked + #knobs:before {
+html body header nav > div > div > div > div > input:checked:active + div:first-of-type::before {
+  margin-left: -26px;
+}
+html body header nav > div > div > div > div > input:checked + div:first-of-type::before {
   content: "";
   left: 42px;
   background: linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%), linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%), linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%), linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%), linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%), linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
   background-color: #012169;
-}
-html body header nav > div > div > div > div > input:checked + #knobs:before:active + #knobs:before {
-  margin-left: -26px;
 }
 html body header nav > div > div > div > div > div {
   position: absolute;
@@ -124,8 +265,7 @@ html body header nav > div > div > div > div > div:first-of-type::before {
   text-align: center;
   line-height: 1;
   padding: 9px 4px;
-  background: #1400a8;
-  background: linear-gradient(90deg, rgb(20, 0, 168) 33%, rgb(255, 255, 255) 33%, rgb(255, 255, 255) 66%, rgb(255, 0, 0) 66%);
+  background: linear-gradient(90deg, rgb(20, 0, 168) 33%, rgb(255, 255, 255) 33% 66%, rgb(255, 0, 0) 66%);
   border-radius: 50%;
   transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
@@ -136,222 +276,46 @@ html body header nav > div > div > div > div > div:last-of-type {
   transition: 0.3s ease all;
   z-index: 1;
 }
-html body footer {
-  padding: 40px 20px;
-  border-top: 2px solid #aaaaaa;
-  text-align: center;
-  min-height: 70px;
-  background-color: #000000;
-}
-
-figure, h1, img, figcaption, a {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-h1 {
-  font-size: 3em;
-  margin-left: 0.25em;
-  line-height: 90%;
-  text-shadow: 5px 5px 1px #77a16d;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-.menuH {
-  font-family: "Sofia-Pro";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0);
-  font-weight: bold;
-  height: 5em;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.menuH .menuH-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.menuH a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3rem;
-  flex: 1;
-  text-align: center;
-  transition: color 0.4s;
-}
-
-.menuH a:hover {
-  color: #23741c;
-}
-
-header {
-  height: 96px;
-}
-
-/* Switch button */
-#app-cover {
-  display: table;
-  width: 600px;
-  margin: 80px auto;
-  counter-reset: button-counter;
-}
-
-.row {
-  display: table-row;
-}
-
-.toggle-button-cover {
-  display: table-cell;
-  position: relative;
-  width: 200px;
-  height: 140px;
-  box-sizing: border-box;
-}
-
-.button-cover {
-  height: 100px;
-  margin: 20px;
-}
-
-.button-cover, .knobs, .layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.button.b2 {
-  border-radius: 2px;
-}
-
-.knobs {
-  z-index: 2;
-}
-
-.layer {
-  width: 100%;
-  background-color: #a8aca7;
-  transition: 0.3s ease all;
-  z-index: 1;
-}
-
-/* Button 3 */
-#button-3 .knobs:before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 20px;
-  height: 10px;
-  color: #fff;
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1;
-  padding: 9px 4px;
-  background: #1400a8;
-  background: linear-gradient(90deg, rgb(20, 0, 168) 33%, rgb(255, 255, 255) 33%, rgb(255, 255, 255) 66%, rgb(255, 0, 0) 66%);
-  border-radius: 50%;
-  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
-}
-
-#button-3 .checkbox:active + .knobs:before {
-  width: 46px;
-  border-radius: 100px;
-}
-
-#button-3 .checkbox:checked:active + .knobs:before {
-  margin-left: -26px;
-}
-
-#button-3 .checkbox:checked + .knobs:before {
-  content: "";
-  left: 42px;
-  background: linear-gradient(transparent 40%, #C8102E 40% 60%, transparent 60%), linear-gradient(to right, transparent 45%, #C8102E 45% 55%, transparent 55%), linear-gradient(transparent 35%, #FFF 35% 65%, transparent 65%), linear-gradient(to right, transparent 42.25%, #FFF 42.25% 57.75%, transparent 42.25%), linear-gradient(25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%), linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%), linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
-  background-color: #012169;
-}
-
-/* 
-.FR {
-    position: fixed;
-    width: 3em;
-    right: 120px;
-    cursor: pointer;
-}
-
-.RU {
-    position: fixed;
-    width: 3em;
-    right: 30px;
-    cursor: pointer;
-}
-
-.FR, .RU {
-  transform: scale(1);
-  transition: transform 0.2s ease;
-}
-
-.FR:hover , .RU:hover {
-  transform: scale(0.95);
-} */
-.hamburger {
+html body header .hamburger {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   padding: 0 1em;
 }
-
-.mobile-menu {
+html body header .mobile-menu {
   display: none;
   position: fixed;
   right: 10px;
   top: 70px;
   flex-direction: column;
-  background-color: #000;
+  background-color: #000000;
   text-align: center;
   border-radius: 13px;
 }
-
-.mobile-menu a:not(.firstCase) {
-  padding: 1em;
-  color: white;
-  border-top: 1px solid #444;
+html body header .mobile-menu a {
+  color: #ffffff;
   text-decoration: none;
 }
-
-.firstCase {
+html body header .mobile-menu a:not(.firstCase) {
   padding: 1em;
-  color: white;
+  border-top: 1px solid #444;
+}
+html body header .mobile-menu a:hover {
+  color: #23741c;
+}
+html body header .mobile-menu .firstCase {
+  padding: 1em;
+  color: #ffffff;
   border-top: 1px solid #444;
   border-radius: 13px;
   text-decoration: none;
 }
-
-.mobile-menu a:hover {
-  color: #23741c;
+html body header .mobile-menu.show {
+  display: flex;
 }
-
-/*--------------------------*/
-/*-----------MAIN-----------*/
-/*--------------------------*/
-/* Global */
-main section {
-  border: rgba(255, 255, 255, 0) solid 3px; /*  bordures  */
+html body main section {
+  border: rgba(255, 255, 255, 0) solid 3px;
   justify-content: center;
   align-content: center;
   margin: 2em;
@@ -360,115 +324,38 @@ main section {
   padding-top: 8em;
   padding-bottom: 8em;
 }
-
-.separator {
-  width: 80px;
-  height: 3px;
-  background-color: #5c5c5c;
-  margin: 10px auto;
-}
-
-div .separator {
-  width: 80px;
-  height: 3px;
-  background-color: #5c5c5c;
-  margin: 10px auto;
-}
-
-.Presentation div, .Competences div:not(.separator), .Parcours div, .Projets div, .Contact {
-  background-color: rgb(248, 240, 240);
-}
-
-/* AboutMe */
-.AboutMe {
+html body main #PRESENTATION {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.AboutMe h2 {
+html body main #PRESENTATION > div h2 {
   text-align: left;
   margin-bottom: 1em;
   text-shadow: 5px 5px 1px #ffffff;
 }
-
-.AboutMe img { /* Photo de Profil */
+html body main #PRESENTATION > img {
   margin-left: 60px;
   width: 400px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 45%;
-  border: 3px solid #aaaaaa;
+  border: 2px solid #23741c;
   box-shadow: 0px 0px 5px #000000;
 }
-
-.btn-cv {
-  display: inline-block;
-  padding: 12px 24px;
-  background: linear-gradient(130deg, #000000, #23741c);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-cv:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
-}
-
-/* Présentation */
-.Presentation {
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.Presentation .container {
+html body main #ABOUTME > div {
   max-width: 800px;
   border: solid #aaaaaa;
   padding: 40px;
   box-shadow: 0px 0px 10px #a1a1a1;
+  background-color: rgb(248, 240, 240);
 }
-
-.Presentation h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+html body main #ABOUTME > div > h2 {
   color: #23741c;
-  font-weight: 600;
+  text-shadow: 2px 2px 1px #000000;
 }
-
-.Presentation p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #636383;
-}
-
-/* Compétences */
-.Competences img {
-  width: 3em;
-  margin: 1em;
-}
-
-.Competences a:not(.GridTitle) {
-  color: #636383;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-
-.GridTitle {
-  color: green;
-  font-size: 1.5rem;
-  margin: 0 0.25em;
-}
-
-.Competences {
+html body main #COMPETENCES {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -477,8 +364,7 @@ div .separator {
   margin-left: 190px;
   margin-right: 190px;
 }
-
-.Competences div:not(.separator) {
+html body main #COMPETENCES > div:not(.separator) {
   border: solid #aaaaaa;
   width: 300px;
   height: 440px;
@@ -486,48 +372,35 @@ div .separator {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(248, 240, 240);
   transform: scale(1);
   transition: transform 0.2s ease;
   box-shadow: 0px 0px 10px #a1a1a1;
 }
-
-.Competences div:hover:not(.separator) {
+html body main #COMPETENCES > div:not(.separator):hover {
   transform: scale(1.02);
 }
-
-/* Parcours */
-.Parcours img {
-  width: 6em;
-  margin: 0 2em 0 2em;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: solid #aaaaaa;
+html body main #COMPETENCES > div:not(.separator) img {
+  width: 3em;
+  margin: 1em;
 }
-
-.Parcours a:not(.GridTitle, .Date) {
+html body main #COMPETENCES > div:not(.separator) a:not(:first-of-type) {
   color: #636383;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 1em 1em;
 }
-
-.Date {
-  color: #444;
-  font-size: 1.7rem;
-  margin: 0 1em 0.5em 1em;
-  display: block;
+html body main #COMPETENCES > div:not(.separator) > strong > a {
+  color: #23741c;
+  text-shadow: 1px 1px 0px #000000;
 }
-
-.Parcours {
+html body main #PARCOURS {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   gap: 6em;
 }
-
-.ParcLeft, .ParcRight {
+html body main #PARCOURS .ParcLeft,
+html body main #PARCOURS .ParcRight {
   border: 2px solid #aaaaaa;
   border-radius: 13px;
   width: 750px;
@@ -538,54 +411,75 @@ div .separator {
   justify-content: center;
   transition: transform 0.2s ease;
   box-shadow: 0px 0px 10px #a1a1a1;
+  background-color: rgb(248, 240, 240);
 }
-
-.ParcLeft {
+html body main #PARCOURS .ParcLeft img,
+html body main #PARCOURS .ParcRight img {
+  width: 6em;
+  margin: 0 2em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: solid #aaaaaa;
+}
+html body main #PARCOURS .ParcLeft a:not(.GridTitle, .Date),
+html body main #PARCOURS .ParcRight a:not(.GridTitle, .Date) {
+  color: #636383;
+  margin: 0 1em 1em;
+}
+html body main #PARCOURS .ParcLeft {
   transform: scale(1) translateX(-200px);
 }
-
-.ParcLeft:hover {
+html body main #PARCOURS .ParcLeft:hover {
   transform: scale(1.02) translateX(-200px);
 }
-
-.ParcRight {
+html body main #PARCOURS .ParcRight {
   transform: scale(1) translateX(200px);
 }
-
-.ParcRight:hover {
+html body main #PARCOURS .ParcRight:hover {
   transform: scale(1.02) translateX(200px);
 }
-
-/* Projets */
-.ProjTiltle {
-  margin-top: 2em;
+html body main #PROJETS {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  margin-left: 190px;
+  margin-right: 190px;
 }
-
-.Projets img {
+html body main #PROJETS > div {
+  border: solid #aaaaaa;
+  width: 300px;
+  height: auto;
+  min-height: 406.08px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(248, 240, 240);
+  transform: scale(1);
+  transition: transform 0.2s ease;
+  box-shadow: 0px 0px 10px #a1a1a1;
+}
+html body main #PROJETS > div:hover {
+  transform: scale(1.02);
+}
+html body main #PROJETS > div img {
   width: 3em;
   margin: 1em;
 }
-
-.Projets a:not(.GridTitle, .btnVoirPLus) {
+html body main #PROJETS > div a:not(:first-of-type, .btnVoirPLus) {
   color: #636383;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 0.5em;
 }
-
-ul {
-  list-style: none;
-  padding-left: 1.5em; /* espace pour la fausse puce */
+html body main #PROJETS > div > strong > a {
+  color: #23741c;
+  text-shadow: 1px 1px 0px #000000;
 }
-
-ul li {
-  position: relative;
-  padding-left: 1.5em; /* espace pour l'image */
-  margin-bottom: 0.5em;
-  text-align: left; /* aligne le texte à gauche */
-}
-
-.Projets ul li::before {
+html body main #PROJETS > div ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -596,145 +490,14 @@ ul li {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-.Projets {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 5em;
-  margin-left: 190px;
-  margin-right: 190px;
-}
-
-.Projets div {
-  border: solid #aaaaaa;
-  width: 300px;
-  height: auto;
-  min-height: 406.08px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  transform: scale(1);
-  transition: transform 0.2s ease;
-  box-shadow: 0px 0px 10px #a1a1a1;
-}
-
-.Projets div:hover {
-  transform: scale(1.02);
-}
-
-.btnVoirPLus {
-  display: inline-block;
-  padding: 12px 24px;
-  margin-bottom: 1em;
-  background: linear-gradient(130deg, #000000, #23741c);
-  color: rgb(243, 243, 243);
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  overflow: auto;
-  padding: 40px 0;
-}
-
-.etapes {
-  text-align: left;
-}
-
-.modal-content {
-  background: #202020;
-  color: #ecf0f1;
-  margin: auto;
-  padding: 40px;
-  border-radius: 20px;
-  width: 60%;
-  max-width: 800px;
-  font-family: "Poppins", sans-serif;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  animation: fadeInModal 0.4s ease;
-  position: relative;
-  top: 10%;
-}
-
-@keyframes fadeInModal {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: #e74c3c;
-  color: white;
-  border-radius: 50%;
-  border: none;
-  padding: 6px 12px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.close:hover {
-  transform: scale(1.1);
-}
-
-.modal-content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;
-  border-bottom: 2px solid #23741c;
-  padding-bottom: 10px;
-}
-
-.contenuModal h3 {
-  font-size: 1.4rem;
-  margin-top: 30px;
-  color: #77a16d;
-}
-
-.contenuModal p {
-  font-size: 1.05rem;
-  margin-bottom: 18px;
-  line-height: 1.7;
-  color: #ecf0f1;
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-    width: 90%;
-    padding: 20px;
-  }
-}
-/*--------------------------*/
-/*----------FOOTER----------*/
-/*--------------------------*/
-.Contact {
+html body footer {
   padding: 40px 20px;
   border-top: 2px solid #aaaaaa;
   text-align: center;
-  min-height: 70px; /* au lieu de height fixe */
+  min-height: 70px;
   background-color: #000000;
 }
-
-.Contact .contact-list {
+html body footer .contact-list {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -743,158 +506,139 @@ ul li {
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
-
-.Contact .contact-list li {
+html body footer .contact-list li {
   font-size: 16px;
   color: #ffffff;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
-.Contact .contact-list a:not(.entTel) {
-  color: #23741c;
-  text-decoration: none;
-}
-
-.Contact .image-button {
+html body footer .contact-list li:nth-last-child(2) img {
   width: 32px;
   height: 32px;
   transition: transform 0.2s;
 }
-
-.Contact .image-button:hover {
-  transform: scale(1.05);
-}
-
-.Contact .image-button-github {
+html body footer .contact-list li:last-of-type img {
   width: 50px;
   height: 50px;
   transition: transform 0.2s;
 }
-
-.Contact .image-button-github:hover {
+html body footer .contact-list a:not(.entTel) {
+  color: #23741c;
+  text-decoration: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+html body footer .image-button {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+html body footer .image-button:hover {
   transform: scale(1.05);
 }
-
-.Contact .copyright {
+html body footer .image-button-github {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s;
+}
+html body footer .image-button-github:hover {
+  transform: scale(1.05);
+}
+html body footer .copyright {
   font-size: 14px;
   color: #999;
   margin-top: 20px;
 }
-
-/*-------------------------------*/
-/*----------MEDIA QUARY----------*/
-/*-------------------------------*/
 @media screen and (max-width: 1250px) {
-  .FR {
-    position: fixed;
-    width: 3em;
-    left: 120px;
-    cursor: pointer;
-  }
-  .RU {
-    position: fixed;
-    width: 3em;
-    left: 30px;
-    cursor: pointer;
-  }
-  .menuH .menuH-items a {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-    margin-left: auto;
-  }
-  .mobile-menu.show {
-    display: flex;
-  }
-  main section {
-    padding-top: 4em;
-    padding-bottom: 4em;
-  }
-  body {
+  html body {
     font-size: 1rem;
   }
-  h1 {
+  html body h1 {
     font-size: 2em;
     line-height: 1.2;
   }
-  h3 {
+  html body h3 {
     font-size: 1.2em;
   }
-  .AboutMe {
+  html body .btn-cv,
+  html body .btnVoirPLus {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  html body .modal .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+  html body header nav > div > a {
+    display: none;
+  }
+  html body header .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+  html body main section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  html body main #PRESENTATION {
     flex-direction: column;
     text-align: center;
   }
-  .AboutMe img {
+  html body main #PRESENTATION > img {
     margin: 1em 0 0 0;
     width: 80%;
   }
-  .Presentation {
-    padding: 40px 10px;
-  }
-  .Presentation .container {
-    padding: 20px;
-    width: 100%;
-  }
-  .Competences {
+  html body main #COMPETENCES {
     margin: 0;
     gap: 2em;
   }
-  .Competences div:not(.separator) {
+  html body main #COMPETENCES > div:not(.separator) {
     width: 90%;
     height: auto;
   }
-  .Parcours {
+  html body main #PARCOURS {
     gap: 3em;
   }
-  .ParcLeft,
-  .ParcRight {
+  html body main #PARCOURS .ParcLeft,
+  html body main #PARCOURS .ParcRight {
     width: 90%;
     height: auto;
     transform: none !important;
     flex-direction: column;
     padding: 1em;
   }
-  .ParcLeft:hover,
-  .ParcRight:hover {
+  html body main #PARCOURS .ParcLeft:hover,
+  html body main #PARCOURS .ParcRight:hover {
     transform: none !important;
   }
-  .Parcours img {
+  html body main #PARCOURS .ParcLeft img,
+  html body main #PARCOURS .ParcRight img {
     width: 4em;
     margin: 1em 0;
   }
-  .Projets {
+  html body main #PROJETS {
     margin: 0;
     gap: 2em;
   }
-  .Projets div {
+  html body main #PROJETS > div {
     width: 90%;
   }
-  .btn-cv,
-  .btnVoirPLus {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-  .modal-content {
-    width: 90%;
-    padding: 20px;
-  }
-  .Contact {
+  html body footer {
     padding: 20px 10px;
   }
-  .Contact .contact-list {
+  html body footer .contact-list {
     gap: 20px;
   }
-  .Contact .contact-list li {
+  html body footer .contact-list li {
     font-size: 14px;
   }
-  .Contact .image-button {
+  html body footer .image-button {
     width: 24px;
     height: 24px;
   }
-  .Contact .copyright {
+  html body footer .copyright {
     font-size: 12px;
   }
 }/*# sourceMappingURL=index.css.map */

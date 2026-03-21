@@ -223,7 +223,7 @@ header {
       linear-gradient(-25deg, transparent 47.5%, #C8102E 47.5% 52.5%, transparent 52.5%),
       linear-gradient(25deg, transparent 45%, #FFF 45% 55%, transparent 55%),
       linear-gradient(-25deg, transparent 45%, #FFF 45% 55%, transparent 55%);
-	background-color: #012169;
+  background-color: #012169;
 }
 
 
@@ -296,7 +296,7 @@ header {
 
 
 
-		
+    
 
 /* Global */
 
@@ -922,3 +922,4 @@ ul li {
   }
 
 }
+
