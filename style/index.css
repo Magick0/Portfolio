@@ -338,6 +338,9 @@ html body main #PRESENTATION {
   justify-content: center;
   align-items: center;
 }
+html body main #PRESENTATION > div {
+  width: 70%;
+}
 html body main #PRESENTATION > div h2 {
   text-align: left;
   margin-bottom: 1em;
@@ -345,7 +348,7 @@ html body main #PRESENTATION > div h2 {
 }
 html body main #PRESENTATION > img {
   margin-left: 60px;
-  width: 400px;
+  width: 20%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;

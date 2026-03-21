@@ -325,6 +325,7 @@ html {
         @include flex-center;
 
         > div {
+          width: 70%;
           h2 {
             text-align: left;
             margin-bottom: 1em;
@@ -334,7 +335,7 @@ html {
 
         > img {
           margin-left: 60px;
-          width: 400px;
+          width: 20%;
           height: auto;
           object-fit: cover;
           border-radius: 45%;
