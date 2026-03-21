@@ -81,6 +81,7 @@ html body .btn-cv {
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 html body .btn-cv:hover {
@@ -90,10 +91,11 @@ html body .btn-cv:hover {
 html body .btnVoirPLus {
   display: inline-block;
   padding: 12px 24px;
-  margin-bottom: 1em;
   background: linear-gradient(130deg, #000000, #23741c);
-  color: rgb(243, 243, 243);
+  color: #ffffff;
   font-weight: bold;
+  text-decoration: none;
+  border: none;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
   cursor: pointer;
@@ -102,6 +104,10 @@ html body .btnVoirPLus {
 html body .btnVoirPLus:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
+}
+html body .btnVoirPLus {
+  margin-bottom: 1em;
+  color: rgb(243, 243, 243);
 }
 html body .modal {
   display: none;
@@ -188,13 +194,15 @@ html body header nav > div {
 html body header nav > div > a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.3rem;
-  flex: 1;
-  text-align: center;
   transition: color 0.4s;
 }
 html body header nav > div > a:hover {
   color: #23741c;
+}
+html body header nav > div > a {
+  font-size: 1.3rem;
+  flex: 1;
+  text-align: center;
 }
 html body header nav > div > div {
   display: table-cell;
@@ -294,15 +302,16 @@ html body header .mobile-menu {
   border-radius: 13px;
 }
 html body header .mobile-menu a {
-  color: #ffffff;
   text-decoration: none;
+  color: #ffffff;
+  transition: color 0.4s;
+}
+html body header .mobile-menu a:hover {
+  color: #23741c;
 }
 html body header .mobile-menu a:not(.firstCase) {
   padding: 1em;
   border-top: 1px solid #444;
-}
-html body header .mobile-menu a:hover {
-  color: #23741c;
 }
 html body header .mobile-menu .firstCase {
   padding: 1em;
@@ -316,18 +325,18 @@ html body header .mobile-menu.show {
 }
 html body main section {
   border: rgba(255, 255, 255, 0) solid 3px;
-  justify-content: center;
-  align-content: center;
-  margin: 2em;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
   padding-top: 8em;
   padding-bottom: 8em;
 }
 html body main #PRESENTATION {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 html body main #PRESENTATION > div h2 {
   text-align: left;
@@ -366,16 +375,17 @@ html body main #COMPETENCES {
 }
 html body main #COMPETENCES > div:not(.separator) {
   border: solid #aaaaaa;
+  background-color: rgb(248, 240, 240);
+  box-shadow: 0px 0px 10px #a1a1a1;
+  transition: transform 0.2s ease;
   width: 300px;
   height: 440px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(248, 240, 240);
   transform: scale(1);
   transition: transform 0.2s ease;
-  box-shadow: 0px 0px 10px #a1a1a1;
 }
 html body main #COMPETENCES > div:not(.separator):hover {
   transform: scale(1.02);
@@ -401,7 +411,11 @@ html body main #PARCOURS {
 }
 html body main #PARCOURS .ParcLeft,
 html body main #PARCOURS .ParcRight {
-  border: 2px solid #aaaaaa;
+  border: solid #aaaaaa;
+  background-color: rgb(248, 240, 240);
+  box-shadow: 0px 0px 10px #a1a1a1;
+  transition: transform 0.2s ease;
+  border-width: 2px;
   border-radius: 13px;
   width: 750px;
   height: 375px;
@@ -409,9 +423,6 @@ html body main #PARCOURS .ParcRight {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
-  box-shadow: 0px 0px 10px #a1a1a1;
-  background-color: rgb(248, 240, 240);
 }
 html body main #PARCOURS .ParcLeft img,
 html body main #PARCOURS .ParcRight img {
@@ -450,20 +461,23 @@ html body main #PROJETS {
 }
 html body main #PROJETS > div {
   border: solid #aaaaaa;
+  background-color: rgb(248, 240, 240);
+  box-shadow: 0px 0px 10px #a1a1a1;
+  transition: transform 0.2s ease;
   width: 300px;
   height: auto;
-  min-height: 406.08px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(248, 240, 240);
   transform: scale(1);
   transition: transform 0.2s ease;
-  box-shadow: 0px 0px 10px #a1a1a1;
 }
 html body main #PROJETS > div:hover {
   transform: scale(1.02);
+}
+html body main #PROJETS > div {
+  min-height: 406.08px;
 }
 html body main #PROJETS > div img {
   width: 3em;
@@ -518,10 +532,16 @@ html body footer .contact-list li:nth-last-child(2) img {
   height: 32px;
   transition: transform 0.2s;
 }
+html body footer .contact-list li:nth-last-child(2) img:hover {
+  transform: scale(1.05);
+}
 html body footer .contact-list li:last-of-type img {
   width: 50px;
   height: 50px;
   transition: transform 0.2s;
+}
+html body footer .contact-list li:last-of-type img:hover {
+  transform: scale(1.05);
 }
 html body footer .contact-list a:not(.entTel) {
   color: #23741c;
@@ -550,95 +570,4 @@ html body footer .copyright {
   font-size: 14px;
   color: #999;
   margin-top: 20px;
-}
-@media screen and (max-width: 1250px) {
-  html body {
-    font-size: 1rem;
-  }
-  html body h1 {
-    font-size: 2em;
-    line-height: 1.2;
-  }
-  html body h3 {
-    font-size: 1.2em;
-  }
-  html body .btn-cv,
-  html body .btnVoirPLus {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-  html body .modal .modal-content {
-    width: 90%;
-    padding: 20px;
-  }
-  html body header nav > div > a {
-    display: none;
-  }
-  html body header .hamburger {
-    display: block;
-    margin-left: auto;
-  }
-  html body main section {
-    padding-top: 4em;
-    padding-bottom: 4em;
-  }
-  html body main #PRESENTATION {
-    flex-direction: column;
-    text-align: center;
-  }
-  html body main #PRESENTATION > img {
-    margin: 1em 0 0 0;
-    width: 80%;
-  }
-  html body main #COMPETENCES {
-    margin: 0;
-    gap: 2em;
-  }
-  html body main #COMPETENCES > div:not(.separator) {
-    width: 90%;
-    height: auto;
-  }
-  html body main #PARCOURS {
-    gap: 3em;
-  }
-  html body main #PARCOURS .ParcLeft,
-  html body main #PARCOURS .ParcRight {
-    width: 90%;
-    height: auto;
-    transform: none !important;
-    flex-direction: column;
-    padding: 1em;
-  }
-  html body main #PARCOURS .ParcLeft:hover,
-  html body main #PARCOURS .ParcRight:hover {
-    transform: none !important;
-  }
-  html body main #PARCOURS .ParcLeft img,
-  html body main #PARCOURS .ParcRight img {
-    width: 4em;
-    margin: 1em 0;
-  }
-  html body main #PROJETS {
-    margin: 0;
-    gap: 2em;
-  }
-  html body main #PROJETS > div {
-    width: 90%;
-  }
-  html body footer {
-    padding: 20px 10px;
-  }
-  html body footer .contact-list {
-    gap: 20px;
-  }
-  html body footer .contact-list li {
-    font-size: 14px;
-  }
-  html body footer .image-button {
-    width: 24px;
-    height: 24px;
-  }
-  html body footer .copyright {
-    font-size: 12px;
-  }
 }/*# sourceMappingURL=index.css.map */
