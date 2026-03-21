@@ -1,42 +1,13 @@
-// ============================================================
-// IMPORTS
-// ============================================================
-
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Poppins&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
-
-// ============================================================
-// VARIABLES
-// ============================================================
-
-$vert:        #23741c;
-$vertClair:   #77a16d;
-$noir:        #000000;
-$blanc:       #ffffff;
-$gris:        #636383;
-$grisBorder:  #aaaaaa;
-$grisSombre:  #5c5c5c;
-$bgCard:      rgb(248, 240, 240);
-$bgShadow:    #a1a1a1;
-
-$fontMain:    "Bai Jamjuree", sans-serif;
-$fontModal:   'Poppins', sans-serif;
-
-$radius:      13px;
-$transition:  transform 0.2s ease;
-
-// ============================================================
-// KEYFRAMES
-// ============================================================
+@use "variables.scss" as *;
+@use "mixines.scss" as *;
 
 @keyframes fadeInModal {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1);    }
 }
 
-// ============================================================
-// STRUCTURE PRINCIPALE
-// ============================================================
 
 html {
   --s: 120px;
@@ -86,16 +57,10 @@ html {
       }
     }
 
+    // ── Séparateur ──────────────────────────────────────
     .separator {
-      width: 80px;
-      height: 3px;
-      background-color: $grisSombre;
-      margin: 10px auto;
+      @include separator();
     }
-
-    // -------------------------------------------------------
-    // COMPOSANTS GLOBAUX
-    // -------------------------------------------------------
 
     .GridTitle {
       color: $vert;
@@ -114,69 +79,24 @@ html {
       text-align: left;
     }
 
+    // ── Boutons dégradés ─────────────────────────────────
     .btn-cv {
-      display: inline-block;
-      padding: 12px 24px;
-      background: linear-gradient(130deg, $noir, $vert);
-      color: $blanc;
-      font-weight: bold;
-      text-decoration: none;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
-      }
+      @include gradient-btn();
     }
 
     .btnVoirPLus {
-      display: inline-block;
-      padding: 12px 24px;
+      @include gradient-btn();
       margin-bottom: 1em;
-      background: linear-gradient(130deg, $noir, $vert);
-      color: rgb(243, 243, 243);
-      font-weight: bold;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
-      }
+      color: rgb(243, 243, 243); // légère sur-écriture
     }
 
-    // -------------------------------------------------------
-    // MODALS
-    // -------------------------------------------------------
 
+    // ── Modale ───────────────────────────────────────────
     .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(5px);
-      overflow: auto;
-      padding: 40px 0;
+      @include modal-overlay;
 
       .modal-content {
-        background: #202020;
-        color: #ecf0f1;
-        margin: auto;
-        padding: 40px;
-        border-radius: 20px;
-        width: 60%;
-        max-width: 800px;
-        font-family: $fontModal;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-        animation: fadeInModal 0.4s ease;
-        position: relative;
-        top: 10%;
+        @include modal-content;
 
         h2 {
           font-size: 2rem;
@@ -219,18 +139,15 @@ html {
       }
     }
 
-    // -------------------------------------------------------
-    // HEADER
-    // -------------------------------------------------------
 
+
+    // ── Header / Navigation ──────────────────────────────
     header {
       height: 96px;
 
       nav {
         font-family: 'Sofia-Pro';
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         background-color: $noir;
         font-weight: bold;
         height: 5em;
@@ -248,14 +165,10 @@ html {
           max-width: 1200px;
 
           > a { // liens de navigation
-            text-decoration: none;
-            color: $blanc;
+            @include nav-link;
             font-size: 1.3rem;
             flex: 1;
             text-align: center;
-            transition: color 0.4s;
-
-            &:hover { color: $vert; }
           }
 
           > div { // toggle-button-cover
@@ -314,8 +227,7 @@ html {
                 }
 
                 > div { // knobs & layer
-                  position: absolute;
-                  top: 0; right: 0; bottom: 0; left: 0;
+                  @include absolute-fill;
 
                   &:first-of-type { // knobs
                     z-index: 2;
@@ -377,15 +289,12 @@ html {
         border-radius: $radius;
 
         a {
-          color: $blanc;
-          text-decoration: none;
+          @include nav-link;
 
           &:not(.firstCase) {
             padding: 1em;
             border-top: 1px solid #444;
           }
-
-          &:hover { color: $vert; }
         }
 
         .firstCase {
@@ -400,27 +309,20 @@ html {
       }
     }
 
-    // -------------------------------------------------------
-    // MAIN
-    // -------------------------------------------------------
+    // ── MAIN ────────────────────────────────────────────
 
     main {
 
       section {
         border: #ffffff00 solid 3px;
-        justify-content: center;
-        align-content: center;
+        @include flex-wrap-center;
         margin: 2em;
-        display: flex;
-        flex-wrap: wrap;
         padding-top: 8em;
         padding-bottom: 8em;
       }
 
       #PRESENTATION {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
 
         > div {
           h2 {
@@ -442,42 +344,28 @@ html {
       }
 
       #ABOUTME {
-        >div{
-            max-width: 800px;
-            border: solid #aaaaaa;
-            padding: 40px;
-            box-shadow: 0px 0px 10px #a1a1a1;
-            background-color: $bgCard;
-            >h2{
-                color: $vert;
-                text-shadow: 2px 2px 1px $noir;
-            }
+        > div {
+          max-width: 800px;
+          border: solid #aaaaaa;
+          padding: 40px;
+          box-shadow: 0px 0px 10px #a1a1a1;
+          background-color: $bgCard;
+
+          > h2 {
+            color: $vert;
+            text-shadow: 2px 2px 1px $noir;
+          }
         }
       }
 
       #COMPETENCES {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        @include flex-wrap-center;
         gap: 5em;
         margin-left: 190px;
         margin-right: 190px;
 
         > div:not(.separator) {
-          border: solid $grisBorder;
-          width: 300px;
-          height: 440px;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          align-items: center;
-          background-color: $bgCard;
-          transform: scale(1);
-          transition: $transition;
-          box-shadow: 0px 0px 10px $bgShadow;
-
-          &:hover { transform: scale(1.02); }
+          @include grid-card(300px, 440px);
 
           img {
             width: 3em;
@@ -489,7 +377,7 @@ html {
             margin: 0.5em 1em 1em;
           }
 
-          >strong >a{
+          > strong > a {
             color: $vert;
             text-shadow: 1px 1px 0px $noir;
           }
@@ -497,25 +385,12 @@ html {
       }
 
       #PARCOURS {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center;
         gap: 6em;
 
         .ParcLeft,
         .ParcRight {
-          border: 2px solid $grisBorder;
-          border-radius: $radius;
-          width: 750px;
-          height: 375px;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-          transition: $transition;
-          box-shadow: 0px 0px 10px $bgShadow;
-          background-color: $bgCard;
+          @include parc-card;
 
           img {
             width: 6em;
@@ -543,29 +418,14 @@ html {
       }
 
       #PROJETS {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        @include flex-wrap-center;
         gap: 5em;
         margin-left: 190px;
         margin-right: 190px;
 
         > div {
-          border: solid $grisBorder;
-          width: 300px;
-          height: auto;
+          @include grid-card(300px, auto);
           min-height: 406.08px;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          align-items: center;
-          background-color: $bgCard;
-          transform: scale(1);
-          transition: $transition;
-          box-shadow: 0px 0px 10px $bgShadow;
-
-          &:hover { transform: scale(1.02); }
 
           img {
             width: 3em;
@@ -579,7 +439,7 @@ html {
             margin-top: 0.5em;
           }
 
-          >strong >a{
+          > strong > a {
             color: $vert;
             text-shadow: 1px 1px 0px $noir;
           }
@@ -599,9 +459,7 @@ html {
       }
     }
 
-    // -------------------------------------------------------
-    // FOOTER
-    // -------------------------------------------------------
+    // ── FOOTER ──────────────────────────────────────────
 
     footer {
       padding: 40px 20px;
@@ -619,26 +477,21 @@ html {
         margin-bottom: 30px;
         flex-wrap: wrap;
 
-          li {
-            font-size: 16px;
-            color: $blanc;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            
-            &:nth-last-child(2) img{
+        li {
+          font-size: 16px;
+          color: $blanc;
+          display: flex;
+          align-items: center;
+          gap: 8px;
 
-              width: 32px;
-              height: 32px;
-              transition: transform 0.2s;
-            }
-            
-            &:last-of-type img{
-              width: 50px;
-              height: 50px;
-              transition: transform 0.2s;
-            }
-          }        
+          &:nth-last-child(2) img {
+            @include image-button(32px);
+          }
+
+          &:last-of-type img {
+            @include image-button(50px);
+          }
+        }
 
         a:not(.entTel) {
           color: $vert;
@@ -647,123 +500,19 @@ html {
         }
       }
 
+      // ── Boutons image standalone ─────────────────────
       .image-button {
-        width: 32px;
-        height: 32px;
-        transition: transform 0.2s;
-        &:hover { transform: scale(1.05); }
+        @include image-button(32px);
       }
 
       .image-button-github {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.2s;
-        &:hover { transform: scale(1.05); }
+        @include image-button(50px);
       }
 
       .copyright {
         font-size: 14px;
         color: #999;
         margin-top: 20px;
-      }
-    }
-
-    // -------------------------------------------------------
-    // RESPONSIVE
-    // -------------------------------------------------------
-
-    @media screen and (max-width: 1250px) {
-
-      font-size: 1rem;
-
-      h1 { font-size: 2em; line-height: 1.2; }
-      h3 { font-size: 1.2em; }
-
-      .btn-cv,
-      .btnVoirPLus {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-      }
-
-      .modal .modal-content {
-        width: 90%;
-        padding: 20px;
-      }
-
-      header {
-        nav > div > a { display: none; }
-
-        .hamburger {
-          display: block;
-          margin-left: auto;
-        }
-      }
-
-      main {
-
-        section {
-          padding-top: 4em;
-          padding-bottom: 4em;
-        }
-
-        #PRESENTATION {
-          flex-direction: column;
-          text-align: center;
-
-          > img {
-            margin: 1em 0 0 0;
-            width: 80%;
-          }
-        }
-
-        #COMPETENCES {
-          margin: 0;
-          gap: 2em;
-
-          > div:not(.separator) {
-            width: 90%;
-            height: auto;
-          }
-        }
-
-        #PARCOURS {
-          gap: 3em;
-
-          .ParcLeft,
-          .ParcRight {
-            width: 90%;
-            height: auto;
-            transform: none !important;
-            flex-direction: column;
-            padding: 1em;
-
-            &:hover { transform: none !important; }
-
-            img {
-              width: 4em;
-              margin: 1em 0;
-            }
-          }
-        }
-
-        #PROJETS {
-          margin: 0;
-          gap: 2em;
-
-          > div { width: 90%; }
-        }
-      }
-
-      footer {
-        padding: 20px 10px;
-
-        .contact-list {
-          gap: 20px;
-          li { font-size: 14px; }
-        }
-
-        .image-button { width: 24px; height: 24px; }
-        .copyright    { font-size: 12px; }
       }
     }
   }

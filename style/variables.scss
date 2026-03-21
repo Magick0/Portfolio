@@ -1,74 +1,18 @@
 @use "sass:color";
 
 
-///////////////////////////////////////
-///                                 ///
-///            COULEURS             ///
-///                                 ///
-///////////////////////////////////////
+$vert:        #23741c;
+$vertClair:   #77a16d;
+$noir:        #000000;
+$blanc:       #ffffff;
+$gris:        #636383;
+$grisBorder:  #aaaaaa;
+$grisSombre:  #5c5c5c;
+$bgCard:      rgb(248, 240, 240);
+$bgShadow:    #a1a1a1;
 
+$fontMain:    "Bai Jamjuree", sans-serif;
+$fontModal:   'Poppins', sans-serif;
 
-
-
-// Texte //
-
-$vertFonce:     #23741c;
-$vertTitre:     green;
-$vertShadow:    #77a16d;
-$grisTexte:     #636383;
-$noir:          #000000;
-$blanc:         white;
-
-// fonds //
-
-$vertClair:     #b3bdb0;
-$grisBorder:    #aaaaaa;
-$grisSeparator: #898989;
-$vertDegrade:   #23741c;
-
-$blancFond:     #dbdbdb;
-$grisFond:      #c7c7c7;
-
-$fondBouton: linear-gradient(130deg, #000000, $vertDegrade);
-
-
-
-
-//////////////////////////////////////
-///                                ///
-///            TAILLES             ///
-///                                ///
-//////////////////////////////////////
-
-
-
-// Texte //
-
-$titreCard: 23px;
-$texteCard: 20px;
-$titre:     28px;
-$texteGros: 33px;
-$titreGros: 65px;
-
-
-
-/////////////////////////////////////
-///                               ///
-///            DIVERS             ///
-///                               ///
-/////////////////////////////////////
-
-
-
-// Shadow //
-
-$fondTitre: 5px 5px 1px $vertShadow;
-$fondTexte: 5px 5px 1px $vertClair;
-$fondCard: 0px 0px 10px #a1a1a1;
-$fondPhoto: 0px 0px 5px #000000;
-
-
-// Border //
-
-
-$borderGris: 3px solid $grisBorder;
+$radius:      13px;
+$transition:  transform 0.2s ease;
