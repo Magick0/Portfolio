@@ -57,7 +57,6 @@ html {
       }
     }
 
-    // ── Séparateur ──────────────────────────────────────
     .separator {
       @include separator();
     }
@@ -79,19 +78,19 @@ html {
       text-align: left;
     }
 
-    // ── Boutons dégradés ─────────────────────────────────
+
     .btn-cv {
       @include gradient-btn();
     }
 
     .btnVoirPLus {
       @include gradient-btn();
-      margin-bottom: 1em;
+      margin-bottom: 2em;
       color: rgb(243, 243, 243); // légère sur-écriture
     }
 
 
-    // ── Modale ───────────────────────────────────────────
+
     .modal {
       @include modal-overlay;
 
@@ -101,7 +100,7 @@ html {
         h2 {
           font-size: 2rem;
           margin-bottom: 20px;
-          color: $blanc;
+          color: $vert;
           border-bottom: 2px solid $vert;
           padding-bottom: 10px;
         }
@@ -114,7 +113,7 @@ html {
           color: $blanc;
           border-radius: 50%;
           border: none;
-          padding: 6px 12px;
+          padding: 3px 12px;
           font-size: 20px;
           cursor: pointer;
           transition: $transition;
@@ -133,7 +132,7 @@ html {
             font-size: 1.05rem;
             margin-bottom: 18px;
             line-height: 1.7;
-            color: #ecf0f1;
+            color: #000000;
           }
         }
       }
@@ -141,7 +140,6 @@ html {
 
 
 
-    // ── Header / Navigation ──────────────────────────────
     header {
       height: 96px;
 
@@ -157,32 +155,32 @@ html {
         left: 0;
         z-index: 1000;
 
-        > div { // .menuH-items
+        > div { 
           display: flex;
           justify-content: space-between;
           align-items: center;
           width: 100%;
           max-width: 1200px;
 
-          > a { // liens de navigation
+          > a { 
             @include nav-link;
             font-size: 1.3rem;
             flex: 1;
             text-align: center;
           }
 
-          > div { // toggle-button-cover
+          > div { 
             display: table-cell;
             position: relative;
             width: 200px;
             height: 140px;
             box-sizing: border-box;
 
-            > div { // button-cover
+            > div { 
               position: absolute;
               top: 0; right: 0; bottom: 0; left: 0;
 
-              > div { // .button.r
+              > div { 
                 position: relative;
                 top: 50%;
                 width: 74px;
@@ -191,7 +189,7 @@ html {
                 overflow: hidden;
                 border-radius: 100px;
 
-                > input { // .checkbox
+                > input { 
                   position: relative;
                   width: 100%;
                   height: 100%;
@@ -226,10 +224,10 @@ html {
                   }
                 }
 
-                > div { // knobs & layer
+                > div { 
                   @include absolute-fill;
 
-                  &:first-of-type { // knobs
+                  &:first-of-type { 
                     z-index: 2;
 
                     &::before {
@@ -256,7 +254,7 @@ html {
                     }
                   }
 
-                  &:last-of-type { // layer
+                  &:last-of-type {
                     border-radius: 100px;
                     width: 100%;
                     background-color: #a8aca7;
@@ -365,7 +363,7 @@ html {
         margin-left: 190px;
         margin-right: 190px;
 
-        > div:not(.separator) {
+        > div {
           @include grid-card(300px, 440px);
 
           img {
@@ -373,7 +371,7 @@ html {
             margin: 1em;
           }
 
-          a:not(:first-of-type) {
+          >a {
             color: $gris;
             margin: 0.5em 1em 1em;
           }
@@ -395,15 +393,21 @@ html {
 
           img {
             width: 6em;
+            height: 6em;
             margin: 0 2em;
             object-fit: cover;
             border-radius: 50%;
-            border: solid $grisBorder;
+            border: 1px solid $grisBorder;
           }
 
-          a:not(.GridTitle, .Date) {
+          a:not(:first-child, .Date) {
             color: $gris;
             margin: 0 1em 1em;
+          }
+
+          strong > a {
+            color: $vert;
+            text-shadow: 1px 1px 0px $noir;
           }
         }
 
@@ -426,18 +430,15 @@ html {
 
         > div {
           @include grid-card(300px, auto);
-          min-height: 406.08px;
+          min-height: 508.33px;
 
           img {
             width: 3em;
             margin: 1em;
           }
 
-          a:not(:first-of-type, .btnVoirPLus) {
-            color: $gris;
-            margin-left: 1em;
-            margin-right: 1em;
-            margin-top: 0.5em;
+          >a {
+            margin-top: auto;
           }
 
           > strong > a {
@@ -460,7 +461,6 @@ html {
       }
     }
 
-    // ── FOOTER ──────────────────────────────────────────
 
     footer {
       padding: 40px 20px;
@@ -501,7 +501,6 @@ html {
         }
       }
 
-      // ── Boutons image standalone ─────────────────────
       .image-button {
         @include image-button(32px);
       }
@@ -514,6 +513,10 @@ html {
         font-size: 14px;
         color: #999;
         margin-top: 20px;
+      }
+
+      p{
+        color: rgb(175, 175, 175);
       }
     }
   }

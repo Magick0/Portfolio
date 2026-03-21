@@ -17,7 +17,7 @@ const translations = {
 
         // Section compétences
         devWeb:             "Développement web",
-        devWebCont:         "Je suis capable de développer des sites web en utilisant des langages tels que HTML, CSS et PHP ainsi que le framework Bootstrap.",
+        devWebCont:         "Je suis capable de développer des sites web en utilisant des langages tels que HTML, CSS, PHP et JavaScript ainsi que le framework Bootstrap.",
 
         devLog:             "Développement Logiciel",
         devLogCont:         "Je suis capable de développer des logiciels en utilisant des langages tels que Java 17, Python, C et JavaFX, ainsi que l'outil JavaFX Scene Builder.",
@@ -37,6 +37,9 @@ const translations = {
         // Section parcours
         BAC:                "Baccalauréat général",
         BACCont:            "Obtention du baccalauréat général spécialités Mathématiques et NSI (Numérique et Sciences Informatiques) au lycée Saint-Paul à Vannes (56).",
+
+        Inter:              "Mise en rayon Intermarché",
+        InterCont:          "J'ai travaillé comme employé de magasin chez Intermarché où j'ai eue pour mission de mettre en rayon les produits et de gérer le stock.",
 
         ete2024:            "Été 2024",
         Moulin:             "Chargé d'encadrement | Réceptionniste",
@@ -114,7 +117,7 @@ const translations = {
     en: {
         // Navigation
         competences:        "SKILLS",
-        diplomes:           "BACKGROUND",
+        diplomes:           "STUDIES",
         projets:            "PROJECTS",
 
         // Presentation section
@@ -123,11 +126,11 @@ const translations = {
 
         // About section
         aboutmeTitle:       "About me",
-        aboutmeText:        "My name is Titouan, I am 19 years old and currently a 2nd-year Computer Science student at IUT de Lannion. I am curious about almost everything, but above all I love discovering new things. I am interested in music, astronomy, video games and rock climbing. I also enjoy psychology, physics, 3D and drawing.",
+        aboutmeText:        "My name is Titouan, I am 19 years old and currently a 2nd-year Computer Science student at IUT de Lannion. I am curious about almost everything, but above all I love discovering new things. I am interested in music, astronomy, video games and climbing/boulding. I also enjoy psychology, physics, 3D and drawing.",
 
         // Skills section
         devWeb:             "Web Development",
-        devWebCont:         "I am able to build websites using languages such as HTML, CSS and PHP, as well as the Bootstrap framework.",
+        devWebCont:         "I am able to build websites using languages such as HTML, CSS, PHP and JavaScript, as well as the Bootstrap framework.",
 
         devLog:             "Software Development",
         devLogCont:         "I am able to develop software using languages such as Java 17, Python, C and JavaFX, as well as the JavaFX Scene Builder tool.",
@@ -147,6 +150,9 @@ const translations = {
         // Background section
         BAC:                "General Baccalaureate",
         BACCont:            "Awarded the general baccalaureate with specialisations in Mathematics and NSI (Digital Technology and Computer Science) at Lycée Saint-Paul in Vannes (56).",
+
+        Inter:              "Stock Replenishment at Intermarché",
+        InterCont:          "I worked as a store employee at Intermarché where my mission was to restock products and manage inventory.",
 
         ete2024:            "Summer 2024",
         Moulin:             "Supervision Officer | Receptionist",

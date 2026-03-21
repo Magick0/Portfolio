@@ -199,8 +199,8 @@
 /// Boîte de contenu de la modale
 /// @param {Font}   $font - famille de police à utiliser
 @mixin modal-content($font: $fontModal) {
-  background: #202020;
-  color: #ecf0f1;
+  background: white;
+  color: #000000;
   margin: auto;
   padding: 40px;
   border-radius: 20px;

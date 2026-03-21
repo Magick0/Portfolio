@@ -106,7 +106,7 @@ html body .btnVoirPLus:hover {
   box-shadow: 0 6px 18px rgba(0, 255, 0, 0.4);
 }
 html body .btnVoirPLus {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: rgb(243, 243, 243);
 }
 html body .modal {
@@ -120,8 +120,8 @@ html body .modal {
   padding: 40px 0;
 }
 html body .modal .modal-content {
-  background: #202020;
-  color: #ecf0f1;
+  background: white;
+  color: #000000;
   margin: auto;
   padding: 40px;
   border-radius: 20px;
@@ -136,7 +136,7 @@ html body .modal .modal-content {
 html body .modal .modal-content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #23741c;
   border-bottom: 2px solid #23741c;
   padding-bottom: 10px;
 }
@@ -148,7 +148,7 @@ html body .modal .modal-content .close {
   color: #ffffff;
   border-radius: 50%;
   border: none;
-  padding: 6px 12px;
+  padding: 3px 12px;
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -165,7 +165,7 @@ html body .modal .modal-content .contenuModal p {
   font-size: 1.05rem;
   margin-bottom: 18px;
   line-height: 1.7;
-  color: #ecf0f1;
+  color: #000000;
 }
 html body header {
   height: 96px;
@@ -299,7 +299,7 @@ html body header .mobile-menu {
   flex-direction: column;
   background-color: #000000;
   text-align: center;
-  border-radius: 13px;
+  border-radius: 10px;
 }
 html body header .mobile-menu a {
   text-decoration: none;
@@ -317,7 +317,7 @@ html body header .mobile-menu .firstCase {
   padding: 1em;
   color: #ffffff;
   border-top: 1px solid #444;
-  border-radius: 13px;
+  border-radius: 10px;
   text-decoration: none;
 }
 html body header .mobile-menu.show {
@@ -376,7 +376,7 @@ html body main #COMPETENCES {
   margin-left: 190px;
   margin-right: 190px;
 }
-html body main #COMPETENCES > div:not(.separator) {
+html body main #COMPETENCES > div {
   border: solid #aaaaaa;
   background-color: rgb(248, 240, 240);
   box-shadow: 0px 0px 10px #a1a1a1;
@@ -390,18 +390,18 @@ html body main #COMPETENCES > div:not(.separator) {
   transform: scale(1);
   transition: transform 0.2s ease;
 }
-html body main #COMPETENCES > div:not(.separator):hover {
+html body main #COMPETENCES > div:hover {
   transform: scale(1.02);
 }
-html body main #COMPETENCES > div:not(.separator) img {
+html body main #COMPETENCES > div img {
   width: 3em;
   margin: 1em;
 }
-html body main #COMPETENCES > div:not(.separator) a:not(:first-of-type) {
+html body main #COMPETENCES > div > a {
   color: #636383;
   margin: 0.5em 1em 1em;
 }
-html body main #COMPETENCES > div:not(.separator) > strong > a {
+html body main #COMPETENCES > div > strong > a {
   color: #23741c;
   text-shadow: 1px 1px 0px #000000;
 }
@@ -419,7 +419,7 @@ html body main #PARCOURS .ParcRight {
   box-shadow: 0px 0px 10px #a1a1a1;
   transition: transform 0.2s ease;
   border-width: 2px;
-  border-radius: 13px;
+  border-radius: 10px;
   width: 750px;
   height: 375px;
   display: flex;
@@ -430,16 +430,22 @@ html body main #PARCOURS .ParcRight {
 html body main #PARCOURS .ParcLeft img,
 html body main #PARCOURS .ParcRight img {
   width: 6em;
+  height: 6em;
   margin: 0 2em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: solid #aaaaaa;
+  border: 1px solid #aaaaaa;
 }
-html body main #PARCOURS .ParcLeft a:not(.GridTitle, .Date),
-html body main #PARCOURS .ParcRight a:not(.GridTitle, .Date) {
+html body main #PARCOURS .ParcLeft a:not(:first-child, .Date),
+html body main #PARCOURS .ParcRight a:not(:first-child, .Date) {
   color: #636383;
   margin: 0 1em 1em;
+}
+html body main #PARCOURS .ParcLeft strong > a,
+html body main #PARCOURS .ParcRight strong > a {
+  color: #23741c;
+  text-shadow: 1px 1px 0px #000000;
 }
 html body main #PARCOURS .ParcLeft {
   transform: scale(1) translateX(-200px);
@@ -480,17 +486,14 @@ html body main #PROJETS > div:hover {
   transform: scale(1.02);
 }
 html body main #PROJETS > div {
-  min-height: 406.08px;
+  min-height: 508.33px;
 }
 html body main #PROJETS > div img {
   width: 3em;
   margin: 1em;
 }
-html body main #PROJETS > div a:not(:first-of-type, .btnVoirPLus) {
-  color: #636383;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 0.5em;
+html body main #PROJETS > div > a {
+  margin-top: auto;
 }
 html body main #PROJETS > div > strong > a {
   color: #23741c;
@@ -573,4 +576,7 @@ html body footer .copyright {
   font-size: 14px;
   color: #999;
   margin-top: 20px;
+}
+html body footer p {
+  color: rgb(175, 175, 175);
 }/*# sourceMappingURL=index.css.map */
